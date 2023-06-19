@@ -1,0 +1,15 @@
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\bin\Debug\net6.0\E02Ulazizlaz.exe
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\bin\Debug\net6.0\E02Ulazizlaz.deps.json
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\bin\Debug\net6.0\E02Ulazizlaz.runtimeconfig.json
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\bin\Debug\net6.0\E02Ulazizlaz.dll
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\bin\Debug\net6.0\E02Ulazizlaz.pdb
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\E02Ulazizlaz.csproj.AssemblyReference.cache
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\E02Ulazizlaz.GeneratedMSBuildEditorConfig.editorconfig
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\E02Ulazizlaz.AssemblyInfoInputs.cache
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\E02Ulazizlaz.AssemblyInfo.cs
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\E02Ulazizlaz.csproj.CoreCompileInputs.cache
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\E02Ulazizlaz.dll
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\refint\E02Ulazizlaz.dll
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\E02Ulazizlaz.pdb
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\E02Ulazizlaz.genruntimeconfig.cache
+D:\VjezbeSQL24\CSHARP\E02Ulazizlaz\E02Ulazizlaz\obj\Debug\net6.0\ref\E02Ulazizlaz.dll
