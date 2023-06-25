@@ -1,0 +1,15 @@
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\E01UvjetnoGrananjeIF.csproj.AssemblyReference.cache
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\E01UvjetnoGrananjeIF.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\E01UvjetnoGrananjeIF.AssemblyInfoInputs.cache
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\E01UvjetnoGrananjeIF.AssemblyInfo.cs
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\E01UvjetnoGrananjeIF.csproj.CoreCompileInputs.cache
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\bin\Debug\net6.0\E01UvjetnoGrananjeIF.exe
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\bin\Debug\net6.0\E01UvjetnoGrananjeIF.deps.json
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\bin\Debug\net6.0\E01UvjetnoGrananjeIF.runtimeconfig.json
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\bin\Debug\net6.0\E01UvjetnoGrananjeIF.dll
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\bin\Debug\net6.0\E01UvjetnoGrananjeIF.pdb
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\E01UvjetnoGrananjeIF.dll
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\refint\E01UvjetnoGrananjeIF.dll
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\E01UvjetnoGrananjeIF.pdb
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\E01UvjetnoGrananjeIF.genruntimeconfig.cache
+D:\C-Sharp\C-Sharp\Console03\E01UvjetnoGrananjeIF\obj\Debug\net6.0\ref\E01UvjetnoGrananjeIF.dll
