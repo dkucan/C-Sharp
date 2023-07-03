@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C-Sharp\\C-Sharp\\Console02\\E03Konverzija\\E03Konverzija.csproj",
+      "projectUniqueName": "D:\\C-Sharp\\CSHARP\\Console02\\E03Konverzija\\E03Konverzija.csproj",
       "projectName": "E03Konverzija",
-      "projectPath": "D:\\C-Sharp\\C-Sharp\\Console02\\E03Konverzija\\E03Konverzija.csproj",
+      "projectPath": "D:\\C-Sharp\\CSHARP\\Console02\\E03Konverzija\\E03Konverzija.csproj",
       "packagesPath": "C:\\Users\\CTU-LA\\.nuget\\packages\\",
-      "outputPath": "D:\\C-Sharp\\C-Sharp\\Console02\\E03Konverzija\\obj\\",
+      "outputPath": "D:\\C-Sharp\\CSHARP\\Console02\\E03Konverzija\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
