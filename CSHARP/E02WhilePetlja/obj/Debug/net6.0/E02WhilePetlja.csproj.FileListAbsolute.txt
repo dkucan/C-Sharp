@@ -1,0 +1,15 @@
+D:\C-Sharp\CSHARP\E02WhilePetlja\bin\Debug\net6.0\E02WhilePetlja.exe
+D:\C-Sharp\CSHARP\E02WhilePetlja\bin\Debug\net6.0\E02WhilePetlja.deps.json
+D:\C-Sharp\CSHARP\E02WhilePetlja\bin\Debug\net6.0\E02WhilePetlja.runtimeconfig.json
+D:\C-Sharp\CSHARP\E02WhilePetlja\bin\Debug\net6.0\E02WhilePetlja.dll
+D:\C-Sharp\CSHARP\E02WhilePetlja\bin\Debug\net6.0\E02WhilePetlja.pdb
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\E02WhilePetlja.csproj.AssemblyReference.cache
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\E02WhilePetlja.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\E02WhilePetlja.AssemblyInfoInputs.cache
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\E02WhilePetlja.AssemblyInfo.cs
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\E02WhilePetlja.csproj.CoreCompileInputs.cache
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\E02WhilePetlja.dll
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\refint\E02WhilePetlja.dll
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\E02WhilePetlja.pdb
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\E02WhilePetlja.genruntimeconfig.cache
+D:\C-Sharp\CSHARP\E02WhilePetlja\obj\Debug\net6.0\ref\E02WhilePetlja.dll
