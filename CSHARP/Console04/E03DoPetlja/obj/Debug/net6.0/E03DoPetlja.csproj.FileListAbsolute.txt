@@ -1,0 +1,5 @@
+D:\C-Sharp\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.csproj.AssemblyReference.cache
+D:\C-Sharp\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Sharp\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.AssemblyInfoInputs.cache
+D:\C-Sharp\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.AssemblyInfo.cs
+D:\C-Sharp\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.csproj.CoreCompileInputs.cache

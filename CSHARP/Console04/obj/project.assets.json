@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C-Sharp\\CSHARP\\Console04\\E02WhilePEtlja.csproj",
-      "projectName": "E02WhilePEtlja",
-      "projectPath": "D:\\C-Sharp\\CSHARP\\Console04\\E02WhilePEtlja.csproj",
+      "projectUniqueName": "D:\\C-Sharp\\CSHARP\\Console04\\E01ForPetlja.csproj",
+      "projectName": "E01ForPetlja",
+      "projectPath": "D:\\C-Sharp\\CSHARP\\Console04\\E01ForPetlja.csproj",
       "packagesPath": "C:\\Users\\CTU-LA\\.nuget\\packages\\",
       "outputPath": "D:\\C-Sharp\\CSHARP\\Console04\\obj\\",
       "projectStyle": "PackageReference",

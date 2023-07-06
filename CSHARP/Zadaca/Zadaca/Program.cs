@@ -24,53 +24,62 @@
 
 //ZAGLAVLJE
 
-string razdjelnik = "------------------------------";
-string razdjelnik_dvotocka = " : : : : : : : ";
-string zaglavlje = " : : : TABLICA MNOZENJA : : : ";
-string razmak = "   ";
-string umnozak;
 
-// TABLICA
-Console.WriteLine(razdjelnik);
-Console.WriteLine(zaglavlje);
-Console.WriteLine(razdjelnik);
-
-for (int i = 0; i < 10; i++)
+internal class Program
 {
-    if (i==0)
+    private static void Main(string[] args)
     {
-        Console.Write("*|  ");
-    }
-    else
-    {
-        Console.Write(i);
-        Console.Write(" |");
-    }
-    for (int j= 1;  j < 10; j++)
-    {
-        if (i==0)
-        {
-            Console.Write(j);
-            Console.Write(razmak[^2..]);
-        }
-        else
-        {
-            umnozak = "   " + i * j;
-            Console.Write(umnozak[^3..]);
-        }
-    }
-    Console.WriteLine();
-    if (i==0)
-    {
+        string razdjelnik = "------------------------------";
+        string razdjelnik_dvotocka = " : : : : : : : ";
+        string zaglavlje = " : : : TABLICA MNOZENJA : : : ";
+        string razmak = "  ";
+        string umnozak;
+
+        // TABLICA
         Console.WriteLine(razdjelnik);
+        Console.WriteLine(zaglavlje);
+        Console.WriteLine(razdjelnik);
+
+        for (int i = 0; i < 10; i++)
+        {
+
+            if (i == 0)
+            {
+                Console.Write("*| ");
+            }
+            else
+            {
+                Console.Write(i);
+                Console.Write(" |");
+            }
+            for (int j = 1; j < 10; j++)
+            {
+                if (i == 0)
+                {
+                    Console.Write(j);
+                    Console.Write(razmak[^2..]);
+                }
+                else
+                {
+                    umnozak = "   " + i * j;
+                    Console.Write(umnozak[^3..]);
+                }
+            }
+            Console.WriteLine();
+
+            if (i == 0)
+            {
+                Console.WriteLine(razdjelnik);
+            }
+        }
+
+        //PODNOŽJE
+
+        Console.WriteLine(razdjelnik);
+        Console.Write(razdjelnik_dvotocka[^18..]);
+        Console.WriteLine(" :by Darko");
+        Console.WriteLine(razdjelnik);
+
+        
     }
-}
-
-//PODNOŽJE
-
-Console.WriteLine(razdjelnik);
-Console.Write(razdjelnik_dvotocka[^18..]);
-Console.Writeline("    :by Darko")
-Console.WriteLine(razdjelnik);
-
-while (Console.ReadLine() == "/n") ;
+};
