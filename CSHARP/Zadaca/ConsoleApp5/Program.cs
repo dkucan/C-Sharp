@@ -7,7 +7,7 @@ for (int i = 0; i < 10; i++)
 {
     if (i == 0 | i == 2 | i == 4 | i == 6 | i == 8)
     {
-        Console.WriteLine("-------------------------------");
+        Console.WriteLine("---------------------------------");
     }
     else if (i == 1)
     {
@@ -40,8 +40,8 @@ for (int i = 0; i < 10; i++)
 
     else if (i == 7)
     {
-        t = ":  :  :  :  :  :  :  :  :  :  :  :  " + "by " + ime;
-        Console.WriteLine(t[^31..]);
+        t = ":  :  :  : : :  : : : : : : : : : : : : : : :  "  +  "by "  + ime;
+        Console.WriteLine(t[^33..]);
 
     }
 
