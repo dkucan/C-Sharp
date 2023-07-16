@@ -1,0 +1,15 @@
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\bin\Debug\net6.0\Zadaca.exe
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\bin\Debug\net6.0\Zadaca.deps.json
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\bin\Debug\net6.0\Zadaca.runtimeconfig.json
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\bin\Debug\net6.0\Zadaca.dll
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\bin\Debug\net6.0\Zadaca.pdb
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\Zadaca.csproj.AssemblyReference.cache
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\Zadaca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\Zadaca.AssemblyInfoInputs.cache
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\Zadaca.AssemblyInfo.cs
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\Zadaca.csproj.CoreCompileInputs.cache
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\Zadaca.dll
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\refint\Zadaca.dll
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\Zadaca.pdb
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\Zadaca.genruntimeconfig.cache
+C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Console03\Zadaca\Zadaca\obj\Debug\net6.0\ref\Zadaca.dll
