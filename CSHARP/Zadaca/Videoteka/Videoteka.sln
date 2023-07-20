@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Videoteka", "Videoteka.csproj", "{1A633816-AAD7-4200-969D-91F598D8C0F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Videoteka", "Videoteka.csproj", "{40E81CCC-AF62-4BA9-BC87-5CDEFFC2BDDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1A633816-AAD7-4200-969D-91F598D8C0F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A633816-AAD7-4200-969D-91F598D8C0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A633816-AAD7-4200-969D-91F598D8C0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A633816-AAD7-4200-969D-91F598D8C0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40E81CCC-AF62-4BA9-BC87-5CDEFFC2BDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40E81CCC-AF62-4BA9-BC87-5CDEFFC2BDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40E81CCC-AF62-4BA9-BC87-5CDEFFC2BDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40E81CCC-AF62-4BA9-BC87-5CDEFFC2BDDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1C9F6AE4-3A48-472E-A5C8-E049261C54F1}
+		SolutionGuid = {77705D1B-773A-496A-A4B3-3B3AB5BF3C3D}
 	EndGlobalSection
 EndGlobal

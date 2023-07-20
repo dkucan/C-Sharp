@@ -1,5 +1,15 @@
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\bin\Debug\net6.0\Videoteka.exe
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\bin\Debug\net6.0\Videoteka.deps.json
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\bin\Debug\net6.0\Videoteka.runtimeconfig.json
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\bin\Debug\net6.0\Videoteka.dll
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\bin\Debug\net6.0\Videoteka.pdb
 D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\Videoteka.csproj.AssemblyReference.cache
 D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\Videoteka.GeneratedMSBuildEditorConfig.editorconfig
 D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\Videoteka.AssemblyInfoInputs.cache
 D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\Videoteka.AssemblyInfo.cs
 D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\Videoteka.csproj.CoreCompileInputs.cache
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\Videoteka.dll
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\refint\Videoteka.dll
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\Videoteka.pdb
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\Videoteka.genruntimeconfig.cache
+D:\C-Sharp\CSHARP\Zadaca\Videoteka\obj\Debug\net6.0\ref\Videoteka.dll

@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Videoteka
 {
-    public class ObradaClan
+    internal class ObradaClan
     {
-        public List<Clan> Clan { get; }
-
-        public ObradaClan()
+        public List<Clan> Članovi { get; }
+        public ObradaClan() 
         {
-            Clan = new List<Clan>();
+            Članovi = new List<Clan>();
             if (Pomocno.dev)
             {
                 TestniPodaci();
@@ -21,103 +20,73 @@ namespace Videoteka
 
         public void PrikaziIzbornik()
         {
-            Console.WriteLine("Izbornik za rad s clanovima");
-            Console.WriteLine("1. Pregled postojećih clanova");
-            Console.WriteLine("2. Unos novog clana");
-            Console.WriteLine("3. Promjena postojećeg clana");
-            Console.WriteLine("4. Brisanje clana");
+            Console.WriteLine("Izbornik za rad s članovima");
+            Console.WriteLine("1. Pregled postojećih članova");
+            Console.WriteLine("2. Unos novog člana");
+            Console.WriteLine("3. Promjena postojećeg člana");
+            Console.WriteLine("4. Brisanje člana");
             Console.WriteLine("5. Povratak na glavni izbornik");
-            switch (Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika clana: ",
+            switch (Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika član: ",
                 "Odabir mora biti 1-5", 1, 5))
             {
                 case 1:
-                    PregledClanova();
+                    PregledČlanova();
                     PrikaziIzbornik();
                     break;
                 case 2:
-                    UcitajClana();
+                    UcitajČlana();
                     PrikaziIzbornik();
                     break;
                 case 3:
-                    PromjenaClana();
+                    PromjenaČlana();
                     PrikaziIzbornik();
                     break;
                 case 4:
-                    BrisanjeClana();
+                    BrisanjeČlana();
                     PrikaziIzbornik();
                     break;
                 case 5:
-                    Console.WriteLine("Gotov rad s clanovima");
+                    Console.WriteLine("Gotov rad s članovima");
                     break;
+
             }
 
-    }
-        private void PromjenaClanova()
-        {
-            PregledClanova();
-            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj clana: ", "Nije dobar odabir", 1, Clanovi.Count());
-            var p = Clanovi[index - 1];
-            p.Sifra = Pomocno.ucitajCijeliBroj("Unesite šifra clana (" + p.Sifra + "): ",
-                "Unos mora biti pozitivni cijeli broj");
-            p.Ime = Pomocno.UcitajString("Unesi ime clana (" + p.Ime + "): ", "Ime obavezno");
-            p.Prezime = Pomocno.UcitajString("Unesi Prezime clana (" + p.Prezime + "): ", "Prezime obavezno");
-            p.Email = Pomocno.UcitajString("Unesi Email clana (" + p.Email + "): ", "Email obavezno");
-            p.Oib = Pomocno.UcitajString("Unesi OIB clana (" + p.Oib + "): ", "OIB obavezno");
         }
 
-        private void BrisanjeClana()
+        private void BrisanjeČlana()
         {
-            PregledPolaznika();
-            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj polaznika: ", "Nije dobar odabir", 1, Clanovi.Count());
-            Clanovi.RemoveAt(index - 1);
+            throw new NotImplementedException();
         }
 
-        public void PregledClanova()
+        private void PromjenaČlana()
         {
-            Console.WriteLine("------------------");
-            Console.WriteLine("---- Clanovi ----");
-            Console.WriteLine("------------------");
-            int b = 1;
-            foreach (Clanovi clan in Clanovi)
-            {
-                Console.WriteLine("{0}. {1}", b++, clan);
-            }
-            Console.WriteLine("------------------");
+            throw new NotImplementedException();
         }
 
-        private void UcitajClana()
+        private void UcitajČlana()
         {
             var p = new Clan();
-            p.Sifra = Pomocno.ucitajCijeliBroj("Unesite šifra člana: ",
+            p.Sifra = Pomocno.ucitajCijeliBroj("Unesite šifru člana: ",
                 "Unos mora biti pozitivni cijeli broj");
-            p.Ime = Pomocno.UcitajString("Unesi ime člana: ", "Ime obavezno");
-            p.Prezime = Pomocno.UcitajString("Unesi Prezime člana: ", "Prezime obavezno");
-            p.Email = Pomocno.UcitajString("Unesi Email člana: ", "Email obavezno");
-            p.Oib = Pomocno.UcitajString("Unesi OIB člana: ", "OIB obavezno");
-            Polaznici.Add(p);
+            p.Ime = Pomocno.ucitajString("Unesi ime člana: ", "Ime obavezno");
+            p.Prezime = Pomocno.ucitajString("Unesi prezime člana: ", "Prezime obavezno");
+            p.Adresa = Pomocno.ucitajString("Unesi adresu člana: ", "Adresa obavezno");
+            p.Telefon = Pomocno.ucitajString("Unesi kontakt telefon člana: ", "telefon obavezno");
+            p.OIB = Pomocno.ucitajString("Unesi OIB člana: ", "OIB obavezno");
+            p.DatumUclanjenja = Pomocno.ucitajString("Unesi datum učlanjenja člana", "datum obavezno");
+            Članovi.Add(p);
+        }
 
+        private void PregledČlanova()
+        {
+            throw new NotImplementedException();
         }
 
         private void TestniPodaci()
         {
-            Clanovi.Add(new clan
-            {
-                Sifra = 1,
-                Ime = "Ana",
-                Prezime = "Gal",
-                Email = "agal@gmail.com",
-                Oib = "33736472822"
-            });
-
-            Clanovi.Add(new clan 
-            {
-                Sifra = 2,
-                Ime = "Marija",
-                Prezime = "Zimska",
-                Email = "mzimska@gmail.com",
-                Oib = "33736472821"
-            });
+            throw new NotImplementedException();
         }
+
+        public List<Clan> Clanovi { get; private set; }
     }
 }
-

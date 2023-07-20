@@ -1,5 +1,0 @@
-C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Zadaca\Videoteka\Videoteka\obj\Debug\net6.0\Videoteka.csproj.AssemblyReference.cache
-C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Zadaca\Videoteka\Videoteka\obj\Debug\net6.0\Videoteka.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Zadaca\Videoteka\Videoteka\obj\Debug\net6.0\Videoteka.AssemblyInfoInputs.cache
-C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Zadaca\Videoteka\Videoteka\obj\Debug\net6.0\Videoteka.AssemblyInfo.cs
-C:\Users\darko\Documents\GitHub\C-Sharp\CSHARP\Zadaca\Videoteka\Videoteka\obj\Debug\net6.0\Videoteka.csproj.CoreCompileInputs.cache

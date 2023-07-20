@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Videoteka
 {
-   
-     internal abstract class Entitet
-    { 
-            public int Sifra { get; set; }
-
+    internal abstract class Entitet
+    {
+        public int Sifra { get; set; }
     }
 }

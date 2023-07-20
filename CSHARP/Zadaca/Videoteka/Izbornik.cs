@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,54 +9,48 @@ namespace Videoteka
 {
     internal class Izbornik
     {
-        public ObradaFilm ObradaFilm { get; set; }
+        private ObradaKazete ObradaKazete;
+        private ObradaClan ObradaClan;
 
-        public ObradaClan ObradaClan { get; }
-
-        public ObradaCijena ObradaCijena { get; }
-
-        public Izbornik ()
+        public Izbornik() 
         {
-            ObradaFilm = new ObradaFilm();
+            ObradaKazete = new ObradaKazete();
             ObradaClan = new ObradaClan();
-            ObradaCijena = new ObradaCijena();
             PozdravnaPoruka();
             PrikaziIzbornik();
         }
-
         private void PozdravnaPoruka()
         {
-            Console.WriteLine("************************************");
-            Console.WriteLine("***** Videoteka Mursa APP v1.0 ******");
-            Console.WriteLine("**************************************");
+            Console.WriteLine("****************************************");
+            Console.WriteLine("******* Videoteka App v 1.0 ************");
+            Console.WriteLine("****************************************");
         }
-        
-        private void PrikaziIzbornik ()
+        private void PrikaziIzbornik()
         {
             Console.WriteLine("Glavni izbornik");
-            Console.WriteLine("1. Filmovi");
-            Console.WriteLine("2. Clanovi");
-            Console.WriteLine("3. Cijena");
+            Console.WriteLine("1. Kazete");
+            Console.WriteLine("2. Članovi");
+            Console.WriteLine("3. Posudba");
             Console.WriteLine("4. Izlaz iz programa");
-
-            switch (Pomocno.ucitajBrojRaspon ("Odaberite stavku izbornika: ",
-                "Odabir mora biti 1-4", 1, 4))
+            
+            switch (Pomocno.ucitajBrojRaspon ("Odaberite stavku izbornika: ", 
+                "Odabir mora biti 1-4", 1,4))
             {
                 case 1:
-                    ObradaFilm.PrikaziIzbornik();
+                    ObradaKazete.PrikaziIzbornik ();
+                    PrikaziIzbornik();
+                    break;
+                case 2:
+                    ObradaClan.PrikaziIzbornik();
                     PrikaziIzbornik ();
                     break;
-                    case 2:
-                    ObradaClan.PrikaziIzbornik ();
-                    PrikaziIzbornik();
+               case 3:
+                    Console.WriteLine("Rad s posudbama");
+                    PrikaziIzbornik ();
                     break;
-                    case 3:
-                    ObradaCijena.PrikaziIzbornik ();
-                    PrikaziIzbornik();
-                    break;
-                    case 4:
-                    Console.WriteLine("Hvala na korištenju, dovidjenja");
-                    break;
+                case 4:
+                    Console.WriteLine("Hvala na korištenju, doviđenja");
+                        break;
 
             }
         }

@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Videoteka
-
 {
     internal class Pomocno
     {
-        public static bool dev;
+        internal static bool dev;
+
         public static int ucitajBrojRaspon(string poruka, string greska,
-            int poc, int kraj)
+            int pocetak, int kraj)
         {
             int b;
             while (true)
@@ -20,7 +20,7 @@ namespace Videoteka
                 try
                 {
                     b = int.Parse(Console.ReadLine());
-                    if (b >= poc && b <= kraj)
+                    if (b >= pocetak && b <= kraj)
                     {
                         return b;
                     }
@@ -32,7 +32,6 @@ namespace Videoteka
                 }
             }
         }
-
         internal static int ucitajCijeliBroj(string poruka, string greska)
         {
             int b;
@@ -54,7 +53,6 @@ namespace Videoteka
                 }
             }
         }
-
         internal static decimal ucitajDecimalniBroj(string poruka, string greska)
         {
             decimal b;
@@ -71,19 +69,16 @@ namespace Videoteka
                     Console.WriteLine(greska);
                 }
                 catch (Exception ex)
-                {
-                    Console.WriteLine(greska);
-                }
+                { Console.WriteLine(greska); }
             }
         }
-
         internal static bool ucitajBool(string poruka)
         {
             Console.Write(poruka);
             return Console.ReadLine().Trim().ToLower().Equals("da") ? true : false;
         }
 
-        internal static string UcitajString(string poruka, string greska)
+        internal static string ucitajString(string poruka, string greska)
         {
             string s = "";
             while (true)
@@ -96,8 +91,8 @@ namespace Videoteka
                 }
                 Console.WriteLine(greska);
             }
-        }
 
+        }
         internal static DateTime ucitajDatum(string v1, string v2)
         {
             while (true)
@@ -115,3 +110,4 @@ namespace Videoteka
         }
     }
 }
+
