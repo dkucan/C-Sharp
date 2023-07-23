@@ -12,12 +12,14 @@ namespace Videoteka
 
         public int Sifra { get; set; }
         public string Naslov { get; set; }
-        public int GodinaIzdanja { get; set; }
+        public string GodinaIzdanja { get; set; }
 
         public string Zanr { get; set; }
 
-        public int datumUlaskauInventar { get; set; }
+        public string datumUlaskauInventar { get; set; }
 
-        public int cijenaZakasnine { get; set; }
+        public int cijenaPosudbe { get; set; }
+
+        public string cijenaZakasnine { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace Videoteka
 {
     internal class Pomocno
     {
-        internal static bool dev;
+        public static bool dev;
 
         public static int ucitajBrojRaspon(string poruka, string greska,
             int pocetak, int kraj)

@@ -10,14 +10,14 @@ namespace Videoteka
     {
         public string Ime { get; set; }
         public string Prezime { get; set; }
-
         public string OIB { get; set; }
-
         public string Adresa { get; set; }
-
         public string Telefon { get; set; }
-
         public string DatumUclanjenja { get; set; }
 
+        public override string ToString()
+        {
+            return Ime + " " + Prezime;
+        }
     }
 }

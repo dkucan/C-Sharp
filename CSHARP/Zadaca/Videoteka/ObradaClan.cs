@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -77,16 +78,44 @@ namespace Videoteka
             Članovi.Add(p);
         }
 
-        private void PregledČlanova()
+        public void PregledČlanova()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("----------------------");
+            Console.WriteLine("----- Članovi --------");
+            Console.WriteLine("----------------------");
+            int b = 1;
+            foreach (Clan Clan in Clanovi)
+            {
+                Console.WriteLine("\t {0}, {1}", b++, Clan);
+            }
+            Console.WriteLine("----------------------");
         }
 
         private void TestniPodaci()
         {
-            throw new NotImplementedException();
+            Članovi.Add(new Clan
+            {
+                Sifra = 1,
+                Ime = "Pero",
+                Prezime = "Zimski",
+                Adresa = "Huttlerova 27",
+                Telefon = "123-456",
+                OIB = "12345678910",
+                DatumUclanjenja = "22.07.2000"
+            });
+
+            Članovi.Add(new Clan
+            {
+                Sifra = 2,
+                Ime = "Marko",
+                Prezime = "Marković",
+                Adresa = "Huttlerova 27",
+                Telefon = "234-567",
+                OIB = "12345678911",
+                DatumUclanjenja = "22.07.2000"
+            });
         }
 
-        public List<Clan> Clanovi { get; private set; }
+        public List<Clan> Clanovi { get; set; }
     }
 }

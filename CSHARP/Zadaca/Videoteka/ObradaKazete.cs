@@ -13,7 +13,10 @@ namespace Videoteka
         public ObradaKazete()
         {
             Kazete = new List<Kazete>();
-            TestniPodaci();
+            if (Pomocno.dev)
+            {
+                TestniPodaci();
+            }
             
         }
         public void PrikaziIzbornik ()
@@ -40,7 +43,14 @@ namespace Videoteka
                     PrikaziIzbornik();
                     break;
                 case 4:
-                    BrisanjeKazete();
+                    if (Kazete.Count == 0)
+                    {
+                        Console.WriteLine("Nema dostupnih kazeta za brisanje");
+                    }
+                    else
+                    {
+                        BrisanjeKazete();
+                    }
                     PrikaziIzbornik();
                     break;
                 case 5:
@@ -53,12 +63,31 @@ namespace Videoteka
 
         private void BrisanjeKazete()
         {
-            throw new NotImplementedException();
+            PrikaziKazete();
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj kazete: ", "Nije dobar odabir", 1, Kazete.Count());
+            Kazete.RemoveAt(index - 1);
         }
 
         private void PromjenaPostojeceKazete()
         {
-            throw new NotImplementedException();
+            PrikaziKazete ();
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj kazete: ", "Nije dobar odabir", 1,Kazete.Count());
+            var s = Kazete[index - 1];
+            s.sifra = Pomocno.ucitajCijeliBroj("Unesite šifra smjera (" + s.Sifra + "): ",
+                "Unos mora biti pozitivan cijeli broj");
+            s.Naslov = Pomocno.ucitajString("Unesite naslov kazete (" + s.Naslov + "): ",
+                "Unos obavezan");
+            s.Zanr = Pomocno.ucitajString("Unesite žanr (" + s.Zanr + "): ",
+                "Unos mora biti pozitivan cijeli broj");
+            s.GodinaIzdanja = Pomocno.ucitajString ("Unesite godinu izdanja filma (" + s.GodinaIzdanja +"): ",
+                "Unos obavezan");
+            s.datumUlaskauInventar = Pomocno.ucitajString("Ucitaj datum ulaska u inventar (" + s.datumUlaskauInventar + "): ",
+                "Unos obavezan");
+            s.cijenaPosudbe = Pomocno.ucitajCijeliBroj("Cijena posudbe (" + s.cijenaPosudbe + "): ",
+                "Unos mora biti pozitivan cijeli broj");
+            s.cijenaZakasnine = Pomocno.ucitajString("Cijena zakasnine (" + s.cijenaZakasnine + "): ",
+                "Unos mora biti pozitivan cijeli broj");
+
         }
 
         private void UnovNoveKazete()
@@ -68,20 +97,33 @@ namespace Videoteka
             s.Naslov = Pomocno.ucitajString("Unesite naslov kazete (" + s.Naslov + "): ",
                "Unos obavezan");
             s.Zanr = Pomocno.ucitajString("Unesite žanr (" + s.Zanr + "): ",
-                "Unos obavezan");
+                 "Unos obavezan");
+            s.GodinaIzdanja = Pomocno.ucitajString("Unesite godinu izdanja filma (" + s.GodinaIzdanja + "): ",
+            "Unos obavezan");
+            s.cijenaPosudbe = Pomocno.ucitajCijeliBroj("Unesite cijenu posudbe (" + s.cijenaPosudbe + "): ",
+                "Iznos mora biti pozitivan cijeli broj");
+            s.cijenaZakasnine = Pomocno.ucitajString("Unesite cijenu zakasnine (" + s.cijenaZakasnine + "): ",
+                "Iznos mora biti pozitivan cijeli broj");
             Kazete.Add(s);
         }
 
         private void PrikaziKazete()
         {
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("----- Dostupne kazete -----");
+            Console.WriteLine("---------------------------");
+            int b = 1;
             foreach (Kazete kazete in Kazete)
             {
-                Console.WriteLine(kazete.Naslov);
+                Console.WriteLine("\t {0}, {1}",b++, kazete.Naslov);
             }
+            Console.WriteLine("---------------------------");
         }
         private void TestniPodaci ()
         {
             Kazete.Add(new Kazete { Naslov = "Armageddon" });
+            Kazete.Add(new Kazete { Naslov = "24 Redemption" });
+            Kazete.Add(new Kazete { Naslov = "Titanic" });
         }
     }
 }

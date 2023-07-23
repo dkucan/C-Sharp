@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -9,13 +10,15 @@ namespace Videoteka
 {
     internal class Izbornik
     {
-        private ObradaKazete ObradaKazete;
-        private ObradaClan ObradaClan;
+        public ObradaKazete ObradaKazete { get; }
+        public ObradaClan ObradaClan;
+        private ObradaPosudba ObradaPosudba;
 
         public Izbornik() 
         {
             ObradaKazete = new ObradaKazete();
             ObradaClan = new ObradaClan();
+            ObradaPosudba = new ObradaPosudba(this);
             PozdravnaPoruka();
             PrikaziIzbornik();
         }
@@ -45,7 +48,7 @@ namespace Videoteka
                     PrikaziIzbornik ();
                     break;
                case 3:
-                    Console.WriteLine("Rad s posudbama");
+                    ObradaPosudba.PrikaziIZbornik ();
                     PrikaziIzbornik ();
                     break;
                 case 4:
