@@ -1,0 +1,15 @@
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.exe
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.deps.json
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.runtimeconfig.json
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.dll
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.pdb
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.csproj.AssemblyReference.cache
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.AssemblyInfoInputs.cache
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.AssemblyInfo.cs
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.csproj.CoreCompileInputs.cache
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.dll
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\refint\E02Ucahurivanje.dll
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.pdb
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.genruntimeconfig.cache
+D:\C-Sharp\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\ref\E02Ucahurivanje.dll
