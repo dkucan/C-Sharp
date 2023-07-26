@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E01KlasaObjekt", "E01KlasaObjekt.csproj", "{F1BEC583-046C-4B09-80FE-2780C8BEDCE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E01KlasaObjekt", "E01KlasaObjekt.csproj", "{F1BEC583-046C-4B09-80FE-2780C8BEDCE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02Ucahurivanje", "E02Ucahurivanje\E02Ucahurivanje.csproj", "{B2194306-C346-4167-AD41-313C3D3AB2F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E02Ucahurivanje", "E02Ucahurivanje\E02Ucahurivanje.csproj", "{B2194306-C346-4167-AD41-313C3D3AB2F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E03JednakostObjekata", "E03JednakostObjekata\E03JednakostObjekata.csproj", "{2FBBFB37-22D2-4DEB-8438-5756BF27A611}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B2194306-C346-4167-AD41-313C3D3AB2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2194306-C346-4167-AD41-313C3D3AB2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2194306-C346-4167-AD41-313C3D3AB2F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FBBFB37-22D2-4DEB-8438-5756BF27A611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FBBFB37-22D2-4DEB-8438-5756BF27A611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FBBFB37-22D2-4DEB-8438-5756BF27A611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FBBFB37-22D2-4DEB-8438-5756BF27A611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
