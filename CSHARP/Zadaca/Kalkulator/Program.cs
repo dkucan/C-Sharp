@@ -1,12 +1,12 @@
 ﻿{
 
-    Console.WriteLine(" Unesi broj: ");
+    Console.Write(" Unesi broj: ");
     double num1 = Convert.ToDouble(Console.ReadLine());
 
     Console.Write("Unesi operator: ");
     string op = Console.ReadLine();
 
-    Console.WriteLine(" Unesi broj: ");
+    Console.Write(" Unesi broj: ");
     double num2 = Convert.ToDouble(Console.ReadLine());
 
     if (op == "+")
