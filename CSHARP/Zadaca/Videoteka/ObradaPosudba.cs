@@ -47,7 +47,7 @@ namespace Videoteka
                     PrikaziIZbornik();
                     break;
                 case 4:
-                    Console.WriteLine("Gotov rad s grupama");
+                    Console.WriteLine("Gotov rad s posudbama");
                     break;
             }
         }
