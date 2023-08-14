@@ -35,7 +35,7 @@ namespace Videoteka
                     PrikaziIzbornik();
                     break;
                 case 2:
-                    UnovNoveKazete();
+                    UnosNoveKazete();
                     PrikaziIzbornik ();
                     break;
                 case 3:
@@ -90,10 +90,10 @@ namespace Videoteka
 
         }
 
-        private void UnovNoveKazete()
+        private void UnosNoveKazete()
         {
             var s = new Kazete();
-            s.sifra = Pomocno.ucitajCijeliBroj("Unesite naziv kazete", "Unos mora biti pozitivni cijeli broj");
+            s.sifra = Pomocno.ucitajCijeliBroj("Unesite naziv kazete: ", "Unos mora biti pozitivni cijeli broj");
             s.Naslov = Pomocno.ucitajString("Unesite naslov kazete (" + s.Naslov + "): ",
                "Unos obavezan");
             s.Zanr = Pomocno.ucitajString("Unesite žanr (" + s.Zanr + "): ",
