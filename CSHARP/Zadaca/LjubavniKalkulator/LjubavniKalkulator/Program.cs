@@ -16,11 +16,11 @@
 
         if (postotak > 90)
         {
-            Console.WriteLine("Vi ste idealan par!");
+            Console.WriteLine("Ljubav se piše vašim imenima!");
         }
         else if (postotak > 70)
         {
-            Console.WriteLine("Imate natprosječnu kompatibilnost.");
+            Console.WriteLine("Vi ste skoro savršeni!");
         }
         else if (postotak > 50)
         {

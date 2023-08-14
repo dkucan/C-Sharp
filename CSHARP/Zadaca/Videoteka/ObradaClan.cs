@@ -31,7 +31,7 @@ namespace Videoteka
                 "Odabir mora biti 1-5", 1, 5))
             {
                 case 1:
-                    PregledČlanova();
+                    PregledClanova();
                     PrikaziIzbornik();
                     break;
                 case 2:
@@ -74,17 +74,17 @@ namespace Videoteka
             p.Adresa = Pomocno.ucitajString("Unesi adresu člana: ", "Adresa obavezno");
             p.Telefon = Pomocno.ucitajString("Unesi kontakt telefon člana: ", "telefon obavezno");
             p.OIB = Pomocno.ucitajString("Unesi OIB člana: ", "OIB obavezno");
-            p.DatumUclanjenja = Pomocno.ucitajString("Unesi datum učlanjenja člana", "datum obavezno");
+            p.DatumUclanjenja = Pomocno.ucitajString("Unesi datum učlanjenja člana: ", "datum obavezno");
             Članovi.Add(p);
         }
 
-        public void PregledČlanova()
+        public void PregledClanova()
         {
             Console.WriteLine("----------------------");
             Console.WriteLine("----- Članovi --------");
             Console.WriteLine("----------------------");
             int b = 1;
-            foreach (Clan Clan in Clanovi)
+            foreach (Clan Clan in Članovi)
             {
                 Console.WriteLine("\t {0}, {1}", b++, Clan);
             }

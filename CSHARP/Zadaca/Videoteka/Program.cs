@@ -1,7 +1,7 @@
 ﻿
 
 using Videoteka;
-//Pomocno.dev = true;
+Pomocno.dev = true;
 new Izbornik();
 //new ObradaKazete(). PrikaziIzbornik();
 

@@ -73,7 +73,7 @@ namespace Videoteka
             PrikaziKazete ();
             int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj kazete: ", "Nije dobar odabir", 1,Kazete.Count());
             var s = Kazete[index - 1];
-            s.sifra = Pomocno.ucitajCijeliBroj("Unesite šifra smjera (" + s.Sifra + "): ",
+            s.sifra = Pomocno.ucitajCijeliBroj("Unesite šifru kazete (" + s.Sifra + "): ",
                 "Unos mora biti pozitivan cijeli broj");
             s.Naslov = Pomocno.ucitajString("Unesite naslov kazete (" + s.Naslov + "): ",
                 "Unos obavezan");
