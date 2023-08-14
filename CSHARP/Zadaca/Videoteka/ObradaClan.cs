@@ -74,11 +74,22 @@ namespace Videoteka
             p.Adresa = Pomocno.ucitajString("Unesi adresu člana: ", "Adresa obavezno");
             p.Telefon = Pomocno.ucitajString("Unesi kontakt telefon člana: ", "telefon obavezno");
             p.OIB = Pomocno.ucitajString("Unesi OIB člana: ", "OIB obavezno");
-            p.DatumUclanjenja = Pomocno.ucitajString("Unesi datum učlanjenja člana: ", "datum obavezno");
-            Članovi.Add(p);
-        }
+            string datumUclanjenjaInput = Pomocno.ucitajString("Unesi datum učlanjenja člana (dd.MM.yyyy): ", "Datum obavezan");
 
-        public void PregledClanova()
+            DateTime datumUclanjenja;
+            if (!DateTime.TryParseExact(datumUclanjenjaInput, "dd.MM.yyyy", null, System.Globalization.DateTimeStyles.None, out datumUclanjenja))
+            {
+                Console.WriteLine("Neispravan format datuma. Upotrijebite format dd.MM.yyyy.");
+                return;
+            }
+
+            p.DatumUclanjenja = datumUclanjenja.ToString("dd.MM.yyyy");
+            Članovi.Add(p);
+
+}
+
+
+public void PregledClanova()
         {
             Console.WriteLine("----------------------");
             Console.WriteLine("----- Članovi --------");
@@ -119,3 +130,7 @@ namespace Videoteka
         public List<Clan> Clanovi { get; set; }
     }
 }
+
+  
+
+

@@ -15,7 +15,8 @@ namespace Videoteka
         public string Telefon { get; set; }
         public string DatumUclanjenja { get; set; }
 
-        public override string ToString()
+
+public override string ToString()
         {
             return Ime + " " + Prezime;
         }

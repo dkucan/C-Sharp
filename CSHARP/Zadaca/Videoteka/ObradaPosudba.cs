@@ -64,6 +64,22 @@ namespace Videoteka
                 "Unos mora biti pozitivni cijeli broj");
             g.Naslov = Pomocno.ucitajString("Unesite naslov posudbe: ",
                 "Unos obavezan");
+            DateTime datumPosudbe;
+            if (!DateTime.TryParseExact(Pomocno.ucitajString("Unesite datum posudbe (dd.MM.yyyy): ", "Datum obavezan"),
+                "dd.MM.yyyy", null, System.Globalization.DateTimeStyles.None, out datumPosudbe))
+            {
+                Console.WriteLine("Neispravan format datuma posudbe. Upotrijebite format dd.MM.yyyy.");
+                return;
+            }
+            g.DatumPosudbe = datumPosudbe;
+
+            DateTime datumPovrata;
+            if (!DateTime.TryParseExact(Pomocno.ucitajString("Unesite datum povrata (dd.MM.yyyy): ", "Datum obavezan"),
+                "dd.MM.yyyy", null, System.Globalization.DateTimeStyles.None, out datumPovrata))
+            {
+                Console.WriteLine("Neispravan format datuma povrata. Upotrijebite format dd.MM.yyyy.");
+                return;
+            }
             g.DatumPosudbe = Pomocno.ucitajDatum("Unesite datum posudbe: ",
                 "Unos obavezan");
             g.DatumPovrata = Pomocno.ucitajDatum("Unesite datum povrata: ",
