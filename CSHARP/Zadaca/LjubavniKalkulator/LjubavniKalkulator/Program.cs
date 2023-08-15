@@ -14,15 +14,15 @@
         Console.WriteLine();
         Console.WriteLine($"Kompatibilnost između {ime1} i {ime2} je: {postotak}%");
 
-        if (postotak > 90)
+        if (postotak > 95)
         {
             Console.WriteLine("Ljubav se piše vašim imenima!");
         }
-        else if (postotak > 70)
+        else if (postotak > 85)
         {
             Console.WriteLine("Vi ste skoro savršeni!");
         }
-        else if (postotak > 50)
+        else if (postotak > 60)
         {
             Console.WriteLine("Vaša kompatibilnost je OK. Mogla bi biti i bolja ali OK!");
         }
