@@ -79,8 +79,19 @@ namespace Videoteka
                 "Unos obavezan");
             s.Zanr = Pomocno.ucitajString("Unesite žanr (" + s.Zanr + "): ",
                 "Unos mora biti pozitivan cijeli broj");
-            s.GodinaIzdanja = Pomocno.ucitajString ("Unesite godinu izdanja filma (" + s.GodinaIzdanja +"): ",
+            int godinaIzdanja;
+            do
+            {
+                godinaIzdanja = Pomocno.ucitajCijeliBroj("Unesite godinu izdanja filma (" + s.GodinaIzdanja + "): ",
                 "Unos obavezan");
+
+                if (godinaIzdanja < 1920 || godinaIzdanja > 2010)
+                {
+                    Console.WriteLine("Pogrešno unesena godina. Molimo unesite godinu između 1920. i 2010.");
+                }
+            } while (godinaIzdanja < 1920 || godinaIzdanja > 2010);
+
+            s.GodinaIzdanja = godinaIzdanja.ToString();
             s.datumUlaskauInventar = Pomocno.ucitajString("Ucitaj datum ulaska u inventar (" + s.datumUlaskauInventar + "): ",
                 "Unos obavezan");
             s.cijenaPosudbe = Pomocno.ucitajCijeliBroj("Cijena posudbe (" + s.cijenaPosudbe + "): ",
@@ -93,19 +104,33 @@ namespace Videoteka
         private void UnosNoveKazete()
         {
             var s = new Kazete();
-            s.sifra = Pomocno.ucitajCijeliBroj("Unesite naziv kazete: ", "Unos mora biti pozitivni cijeli broj");
+            s.sifra = Pomocno.ucitajCijeliBroj("Unesite šifru kazete: ", "Unos mora biti pozitivni cijeli broj");
             s.Naslov = Pomocno.ucitajString("Unesite naslov kazete (" + s.Naslov + "): ",
                "Unos obavezan");
             s.Zanr = Pomocno.ucitajString("Unesite žanr (" + s.Zanr + "): ",
                  "Unos obavezan");
-            s.GodinaIzdanja = Pomocno.ucitajString("Unesite godinu izdanja filma (" + s.GodinaIzdanja + "): ",
-            "Unos obavezan");
+
+            int godinaIzdanja;
+            do
+            {
+                godinaIzdanja = Pomocno.ucitajCijeliBroj("Unesite godinu izdanja filma (" + s.GodinaIzdanja + "): ",
+                "Unos obavezan");
+
+                if (godinaIzdanja < 1920 || godinaIzdanja > 2010)
+                {
+                    Console.WriteLine("Pogrešno unesena godina. Molimo unesite godinu između 1920. i 2010.");
+                }
+            } while (godinaIzdanja < 1920 || godinaIzdanja > 2010);
+
+            s.GodinaIzdanja = godinaIzdanja.ToString();
+
             s.cijenaPosudbe = Pomocno.ucitajCijeliBroj("Unesite cijenu posudbe (" + s.cijenaPosudbe + "): ",
                 "Iznos mora biti pozitivan cijeli broj");
             s.cijenaZakasnine = Pomocno.ucitajString("Unesite cijenu zakasnine (" + s.cijenaZakasnine + "): ",
                 "Iznos mora biti pozitivan cijeli broj");
             Kazete.Add(s);
         }
+
 
         private void PrikaziKazete()
         {
