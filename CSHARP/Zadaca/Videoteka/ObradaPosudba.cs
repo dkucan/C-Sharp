@@ -71,9 +71,9 @@ namespace Videoteka
                 Console.WriteLine("Neispravan format datuma posudbe. Upotrijebite format dd.MM.yyyy.");
                 return;
             }
-            if (datumPosudbe.Year < 1999 || datumPosudbe.Year > 2010)
+            if (datumPosudbe.Year < 1975 || datumPosudbe.Year > 2010)
             {
-                Console.WriteLine("Pogrešno unesena godina! Dopušteni raspon godina je između 1999. i 2010.");
+                Console.WriteLine("Pogrešno unesena godina! Dopušteni raspon godina je između 1975. i 2010.");
                 return;
             }
             g.DatumPosudbe = datumPosudbe;
