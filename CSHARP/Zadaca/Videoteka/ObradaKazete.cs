@@ -85,11 +85,11 @@ namespace Videoteka
                 godinaIzdanja = Pomocno.ucitajCijeliBroj("Unesite godinu izdanja filma (" + s.GodinaIzdanja + "): ",
                 "Unos obavezan");
 
-                if (godinaIzdanja < 1920 || godinaIzdanja > 2010)
+                if (godinaIzdanja < 1920 || godinaIzdanja > 2023)
                 {
-                    Console.WriteLine("Pogrešno unesena godina. Molimo unesite godinu između 1920. i 2010.");
+                    Console.WriteLine("Pogrešno unesena godina. Molimo unesite godinu između 1920. i 2023.");
                 }
-            } while (godinaIzdanja < 1920 || godinaIzdanja > 2010);
+            } while (godinaIzdanja < 1920 || godinaIzdanja > 2023);
 
             s.GodinaIzdanja = godinaIzdanja.ToString();
             s.datumUlaskauInventar = Pomocno.ucitajString("Ucitaj datum ulaska u inventar (" + s.datumUlaskauInventar + "): ",
@@ -116,11 +116,11 @@ namespace Videoteka
                 godinaIzdanja = Pomocno.ucitajCijeliBroj("Unesite godinu izdanja filma (" + s.GodinaIzdanja + "): ",
                 "Unos obavezan");
 
-                if (godinaIzdanja < 1920 || godinaIzdanja > 2010)
+                if (godinaIzdanja < 1920 || godinaIzdanja > 2023)
                 {
-                    Console.WriteLine("Pogrešno unesena godina. Molimo unesite godinu između 1920. i 2010.");
+                    Console.WriteLine("Pogrešno unesena godina. Molimo unesite godinu između 1920. i 2023.");
                 }
-            } while (godinaIzdanja < 1920 || godinaIzdanja > 2010);
+            } while (godinaIzdanja < 1920 || godinaIzdanja > 2023);
 
             s.GodinaIzdanja = godinaIzdanja.ToString();
 

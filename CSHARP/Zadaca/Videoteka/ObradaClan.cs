@@ -82,9 +82,9 @@ namespace Videoteka
                 Console.WriteLine("Neispravan format datuma. Upotrijebite format dd.MM.yyyy.");
                 return;
             }
-            if (datumUclanjenja.Year < 1975 || datumUclanjenja.Year > 2010)
+            if (datumUclanjenja.Year < 1975 || datumUclanjenja.Year > 2023)
             {
-                Console.WriteLine("Pogrešno unesena godina! Dopušteni raspon godina je između 1975. i 2010.");
+                Console.WriteLine("Pogrešno unesena godina! Dopušteni raspon godina je između 1975. i 2023.");
                 return;
             }
             p.DatumUclanjenja = datumUclanjenja.ToString("dd.MM.yyyy");

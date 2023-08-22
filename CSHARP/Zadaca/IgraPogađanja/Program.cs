@@ -1,23 +1,25 @@
 ﻿{
-    string secretword = "Slon";
-    string guess = "";
-    int guessCount = 0;
-    int GuessLimit = 3;
-    bool nomoreguesses = false;
+    string tajnarijec = "slon"; 
+    string pogodi = "";
+    int brojpokusaja = 0;
+    int limitpokusaja = 3;
+    bool nemavisepokusaja = false;
 
-    while (guess!= secretword && !nomoreguesses)
+    while (pogodi != tajnarijec && !nemavisepokusaja)
     {
-        if (guessCount < GuessLimit)
+        if (brojpokusaja < limitpokusaja)
         {
             Console.Write("Pogodi riječ: ");
-            guess = Console.ReadLine();
-            guessCount++;
+            pogodi = Console.ReadLine();
+            brojpokusaja++;
         }
         else
         {
-            nomoreguesses = true;
+            nemavisepokusaja = true;
         }
-        if (nomoreguesses)
+    }
+    {
+        if (nemavisepokusaja)
         {
             Console.Write("Nažalost, niste uspjeli pogoditi tajnu riječ!");
         }

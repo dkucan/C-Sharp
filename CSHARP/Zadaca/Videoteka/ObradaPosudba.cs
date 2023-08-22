@@ -71,9 +71,9 @@ namespace Videoteka
                 Console.WriteLine("Neispravan format datuma posudbe. Upotrijebite format dd.MM.yyyy.");
                 return;
             }
-            if (datumPosudbe.Year < 1975 || datumPosudbe.Year > 2010)
+            if (datumPosudbe.Year < 1975 || datumPosudbe.Year > 2050)
             {
-                Console.WriteLine("Pogrešno unesena godina! Dopušteni raspon godina je između 1975. i 2010.");
+                Console.WriteLine("Pogrešno unesena godina! Dopušteni raspon godina je između 1975. i 2050.");
                 return;
             }
             g.DatumPosudbe = datumPosudbe;
@@ -85,9 +85,9 @@ namespace Videoteka
                 Console.WriteLine("Neispravan format datuma povrata. Upotrijebite format dd.MM.yyyy.");
                 return;
             }
-            if (datumPovrata.Year < 1999 || datumPovrata.Year > 2010)
+            if (datumPovrata.Year < 1975 || datumPovrata.Year > 2050)
             {
-                Console.WriteLine("Pogrešno unesena godina! Dopušteni raspon godina je između 1999. i 2010.");
+                Console.WriteLine("Pogrešno unesena godina! Dopušteni raspon godina je između 1999. i 2050.");
                 return;
             }
             g.DatumPosudbe = Pomocno.ucitajDatum("Unesite datum posudbe: ",
