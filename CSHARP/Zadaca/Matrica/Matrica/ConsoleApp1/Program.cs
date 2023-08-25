@@ -90,3 +90,5 @@ while (b < stupci * retci)
     }
 
 }
+
+// drugi brojač je stvarao probleme pa je uklonjen
