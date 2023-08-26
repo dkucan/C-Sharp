@@ -9,6 +9,7 @@ int[,] matrica = new int[retci, stupci];
 
 
 int b = 1;
+int k = 0; 
 
 
 while (b < stupci * retci)
@@ -17,6 +18,7 @@ while (b < stupci * retci)
 
     {
         matrica[retci - 1, stupci - i] = b++;
+        matrica[retci - 1, stupci - i] = k++;
         
     }
 
@@ -61,6 +63,7 @@ while (b < stupci * retci)
     for (int i = 1; i < stupci; i++)
     {
         matrica[0, i] = b++;
+        matrica[1, i] = k++;
        
     }
 
@@ -77,7 +80,7 @@ while (b < stupci * retci)
     for (int i = 1; i <= retci - 2; i++)
     {
         matrica[i, stupci - 1] = b++;
-        
+        matrica[i, stupci - 1] = k++;
 
     }
     for (int i = 0; i < retci; i++)
