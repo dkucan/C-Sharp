@@ -16,6 +16,7 @@ namespace E01Lambda
 
         public override string ToString()
         {
+            //return NAziv== null ? "" : Naziv; 
             return Naziv ?? ""; //Ova linija je ekvivalent gornjoj
         }
     }

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E02Delegati
+namespace E03Ekstenzije
 {
-    internal class Smjer
+    public interface ISucelje
     {
-        public int Sifra { get; set; }
-        public String? Naziv { get; set; }
+        public void Posao();
     }
 }

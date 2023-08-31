@@ -8,5 +8,15 @@ namespace E02Delegati
 {
     internal class PrimjerKoristenja2
     {
+        public PrimjerKoristenja2 ()
+        {
+            ObradaSmjer os = new();
+            os.IspisSmjer(nijeBitno);
+        }
+
+        private void nijeBitno (Smjer s)
+        {
+            Console.WriteLine("Drugi način: " + s.Naziv);
+        }
     }
 }

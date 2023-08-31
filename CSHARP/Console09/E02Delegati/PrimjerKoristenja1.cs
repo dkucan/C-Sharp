@@ -8,5 +8,14 @@ namespace E02Delegati
 {
     internal class PrimjerKoristenja1
     {
+        public PrimjerKoristenja1()
+        {
+            ObradaSmjer os = new ObradaSmjer();
+            os.IspisSmjer(MojIspisUOvojKlasi);
+        }
+        private void MojIspisUOvojKlasi (Smjer s)
+        {
+            Console.WriteLine(s.Naziv);
+        }
     }
 }
