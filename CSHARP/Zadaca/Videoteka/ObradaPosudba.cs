@@ -54,7 +54,19 @@ namespace Videoteka
 
         private void PromjenaPostojećePosudbe()
         {
-            
+            PregledPosudbi();
+
+            if (Posudba.Count == 0)
+            {
+                Console.WriteLine("Nema dostupnih posudbi za promjenu");
+                return;
+            }
+
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj posudbe za promjenu: ", "Nije dobar odabir", 1, Posudba.Count);
+
+            var posudba = Posudba[index - 1];
+
+            Console.WriteLine($"Promjena posudbe: {posudba.Naslov}");
         }
 
         private void UnosNovePosudbe()

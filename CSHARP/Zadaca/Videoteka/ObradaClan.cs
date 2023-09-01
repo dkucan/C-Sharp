@@ -56,12 +56,59 @@ namespace Videoteka
 
         private void BrisanjeČlana()
         {
-            throw new NotImplementedException();
+            PregledClanova();
+
+            if (Članovi.Count == 0)
+            {
+                Console.WriteLine("Nema dostupnih članova za brisanje");
+                return;
+            }
+
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj člana za brisanje: ", "Nije dobar odabir", 1, Članovi.Count);
+
+            var clan = Članovi[index - 1];
+
+            Console.WriteLine($"Brisanje člana: {clan.Ime} {clan.Prezime}");
+            if (Pomocno.ucitajBool("Jeste li sigurni da želite izbrisati ovog člana (da/ne)? "))
+            {
+                Članovi.RemoveAt(index - 1);
+                Console.WriteLine("Član je uspješno izbrisan.");
+            }
+            else
+            {
+                Console.WriteLine("Brisanje člana otkazano.");
+            }
         }
 
         private void PromjenaČlana()
         {
-            throw new NotImplementedException();
+            PregledClanova();
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj člana za promjenu: ", "Nije dobar odabir", 1, Članovi.Count);
+
+            var clan = Članovi[index - 1];
+
+            // Sada omogućite unos promjena za člana
+            clan.Ime = Pomocno.ucitajString($"Unesite novo ime za člana ({clan.Ime}): ", "Unos obavezan");
+            clan.Prezime = Pomocno.ucitajString($"Unesite novo prezime za člana ({clan.Prezime}): ", "Unos obavezan");
+            clan.Adresa = Pomocno.ucitajString($"Unesite novu adresu za člana ({clan.Adresa}): ", "Unos obavezan");
+            clan.Telefon = Pomocno.ucitajString($"Unesite novi kontakt telefon za člana ({clan.Telefon}): ", "Unos obavezan");
+            clan.OIB = Pomocno.ucitajString($"Unesite novi OIB za člana ({clan.OIB}): ", "Unos obavezan");
+            string datumUclanjenjaInput = Pomocno.ucitajString($"Unesite novi datum učlanjenja za člana ({clan.DatumUclanjenja}): ", "Unos obavezan");
+
+            DateTime datumUclanjenja;
+            if (!DateTime.TryParseExact(datumUclanjenjaInput, "dd.MM.yyyy", null, System.Globalization.DateTimeStyles.None, out datumUclanjenja))
+            {
+                Console.WriteLine("Neispravan format datuma. Upotrijebite format dd.MM.yyyy.");
+                return;
+            }
+            if (datumUclanjenja.Year < 1975 || datumUclanjenja.Year > 2023)
+            {
+                Console.WriteLine("Pogrešno unesena godina! Dopušteni raspon godina je između 1975. i 2023.");
+                return;
+            }
+            clan.DatumUclanjenja = datumUclanjenja.ToString("dd.MM.yyyy");
+
+            Console.WriteLine("Podaci o članu su ažurirani.");
         }
 
         private void UcitajČlana()
