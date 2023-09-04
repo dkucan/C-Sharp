@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EdunovaAPP.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EdunovaAPP.Controllers
 {
@@ -17,8 +18,29 @@ namespace EdunovaAPP.Controllers
             return new JsonResult(lista);
         }
         [HttpPost]
-        public IActionResult Post(Smjer Smjer) { 
-        // dodavanje u bazu
-        return new JsonResult(Smjer)}
+        public IActionResult Post(Smjer smjer)
+        {
+            // dodavanje u bazu
+            return Created("/api/v1/Smjer", smjer);
+        }
+
+        [HttpPut]
+        [Route("{sifra:int}")]
+        
+        public IActionResult Put(int sifra, Smjer smjer)
+        {
+
+            return StatusCode(StatusCodes.Status200OK, smjer);
+        }
+        [HttpDelete]
+        [Route("{sifra:int")]
+
+        public IActionResult Delete(int sifra)
+        {
+            // brisanje u bazi
+            return StatusCode(StatusCodes.Status200OK, "{\"obrisano\": true}");
+
+        }
     }
+
 }

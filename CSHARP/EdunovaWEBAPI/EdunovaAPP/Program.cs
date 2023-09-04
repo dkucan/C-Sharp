@@ -17,7 +17,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger(opcije =>
     {
         opcije.SerializeAsV2 = true;
-    })
+    });
         app.UseSwaggerUI(opcije =>
         {
             opcije.ConfigObject.AdditionalItems.Add("requestSnippetsEnabled", true);
