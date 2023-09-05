@@ -34,6 +34,7 @@ namespace EdunovaAPP.Controllers
         }
         [HttpDelete]
         [Route("{sifra:int")]
+        [Produces("aplication/json")]
 
         public IActionResult Delete(int sifra)
         {
