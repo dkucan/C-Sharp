@@ -90,8 +90,7 @@ namespace HelloWorld.Controllers
         {
             var m = new int[x, y];
 
-            
-            return new JsonResult (JsonConvert.SerializeObject(m));
+            return new JsonResult(JsonConvert.SerializeObject(m));
         }
     }
 

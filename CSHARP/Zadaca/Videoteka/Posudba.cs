@@ -9,7 +9,7 @@ namespace Videoteka
     internal class Posudba : Entitet
     {
         public string Naslov { get; set; }
-        public Kazete Kazete { get; set; }
+        public string Kazete { get; set; }
         public DateTime DatumPosudbe { get; set; }
         public DateTime DatumPovrata { get; set; }
         public List<Clan> Članovi { get; set; }
