@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal;
 using VIdeoteka.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 
 // dodavanje baze podataka
-builder.Services.AddDbContext<VideotekaContext>(o => UseSqlServer(builder.Configuration.GetConnectionString(name: "VideotekaContext")));
+builder.Services.AddDbContext<VideotekaContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString(name: "VideotekaContext")));
 
 var app = builder.Build();
 
