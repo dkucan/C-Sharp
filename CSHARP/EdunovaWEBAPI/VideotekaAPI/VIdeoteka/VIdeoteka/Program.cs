@@ -35,7 +35,15 @@ builder.Services.AddSwaggerGen(sgo => {
 
 //dodavanje baze podataka mora biti prije buildera
 
-builder.Services.AddDbContext<videotekaContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString(name: "videotekaContext")));
+builder.Services.AddDbContext<videotekaContext>(options =>
+{
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString(name: "videotekaContext"),
+        sqlServerOptionsAction: sqlOptions =>
+        {
+            sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(30), errorNumbersToAdd: null);
+        });
+});
 
 
 var app = builder.Build();
