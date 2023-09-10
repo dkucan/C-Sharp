@@ -1,13 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
-using VIdeoteka.Models;
+﻿using VIdeoteka.Models;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace VIdeoteka.Data
 {
-    public class VideotekaContext : DbContext
+    public class videotekaContext : DbContext
     {
-        public VideotekaContext(DbContextOptions<VideotekaContext> opcije) : base (opcije) 
-        { 
+        public videotekaContext(DbContextOptions<videotekaContext> opcije) : base(opcije)
+        {
         }
-        public DbSet<Posudba> Posudba { get; set;}
+
+        public DbSet<Kazeta> Kazeta { get; set; }
     }
 }
