@@ -11,7 +11,7 @@ namespace VIdeoteka.Models
 
         public string? Naslov { get; set; }
 
-        public string? Godina_izdanja { get; set; }
+        public DateTime Godina_izdanja { get; set; }
 
         public string? Zanr { get; set; }
 
