@@ -75,6 +75,88 @@ namespace VIdeoteka.Controllers
                                    ex.Message);
             }
         }
+
+        [HttpPut]
+        [Route("{sifra:int}")]
+        public IActionResult Put(int Sifra, KAZETA Kazeta)
+        {
+
+            if (Sifra <= 0 || Kazeta == null)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                var KAZETABaza = _context.Kazeta.Find(Sifra);
+                if (KAZETABaza == null)
+                {
+                    return BadRequest();
+                }
+              
+                KAZETABaza.Naslov = Kazeta.Naslov;
+                KAZETABaza.Godina_izdanja = Kazeta.Godina_izdanja;
+                KAZETABaza.Zanr = Kazeta.Zanr;
+                KAZETABaza.Cijena_posudbe = Kazeta.Cijena_posudbe;
+                KAZETABaza.Cijena_zakasnine = Kazeta.Cijena_zakasnine;
+
+                _context.Kazeta.Update(KAZETABaza);
+                _context.SaveChanges();
+
+                return StatusCode(StatusCodes.Status200OK, KAZETABaza);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
+            }
+        }
+        [HttpDelete]
+        [Route("{sifra:int}")]
+        [Produces("application/json")]
+        public IActionResult Delete(int sifra)
+        {
+            if (sifra <= 0)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                var KAZETABaza = _context.Kazeta.Find(sifra);
+                if (KAZETABaza == null)
+                {
+                    return BadRequest();
+                }
+
+                _context.Kazeta.Remove(KAZETABaza);
+                _context.SaveChanges();
+
+                return new JsonResult("{\"poruka\":\"Obrisano\"}");
+
+            }
+            catch (Exception ex)
+            {
+
+                try
+                {
+                    SqlException sqle = (SqlException)ex;
+                    return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                  sqle);
+                }
+                catch (Exception e)
+                {
+
+                }
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                  ex);
+            }
+        }
     }
 }
+
+            
+        
+   
     
