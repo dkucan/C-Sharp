@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace VIdeoteka.Models
 {
-    public class Kazeta : Entitet
+    public class Kazeta : PosudbaKazeta
     {
-        [Key]
-        public new int Sifra { get; set; } // Dodana new ključna riječ
-
         public string? Naslov { get; set; }
 
         public DateTime Godina_izdanja { get; set; }

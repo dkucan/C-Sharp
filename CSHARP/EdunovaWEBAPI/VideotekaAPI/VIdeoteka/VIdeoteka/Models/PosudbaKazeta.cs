@@ -2,7 +2,7 @@
 
 namespace VIdeoteka.Models
 {
-    public abstract class Entitet
+    public abstract class PosudbaKazeta
     {
         [Key]
      public int Sifra { get; set; }
