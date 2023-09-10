@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CTU-LA\\Desktop\\VIdeotekaAPI\\VIdeoteka\\VIdeoteka.csproj": {}
+    "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CTU-LA\\Desktop\\VIdeotekaAPI\\VIdeoteka\\VIdeoteka.csproj": {
+    "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CTU-LA\\Desktop\\VIdeotekaAPI\\VIdeoteka\\VIdeoteka.csproj",
+        "projectUniqueName": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka.csproj",
         "projectName": "VIdeoteka",
-        "projectPath": "C:\\Users\\CTU-LA\\Desktop\\VIdeotekaAPI\\VIdeoteka\\VIdeoteka.csproj",
+        "projectPath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka.csproj",
         "packagesPath": "C:\\Users\\CTU-LA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CTU-LA\\Desktop\\VIdeotekaAPI\\VIdeoteka\\obj\\",
+        "outputPath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

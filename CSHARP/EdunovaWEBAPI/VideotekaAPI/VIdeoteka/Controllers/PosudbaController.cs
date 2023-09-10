@@ -18,11 +18,11 @@ namespace VIdeoteka.Controllers
             return new JsonResult(lista);
         }
 
-        //[HttpPost]
-        //public IActionResult Post(Posudba posudba)
-        //{
-        //    Created("/api/v1/Posudba", posudba);
-        //}
+        [HttpPost]
+        public IActionResult Post(Posudba posudba)
+        {
+            return Created ("/api/v1/Posudba", posudba);
+        }
 
         [HttpPut]
         [Route("{sifra:int}")]

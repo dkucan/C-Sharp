@@ -142,3 +142,13 @@ C:\Users\CTU-LA\Desktop\VIdeotekaAPI\VIdeoteka\obj\Debug\net7.0\refint\VIdeoteka
 C:\Users\CTU-LA\Desktop\VIdeotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.pdb
 C:\Users\CTU-LA\Desktop\VIdeotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.genruntimeconfig.cache
 C:\Users\CTU-LA\Desktop\VIdeotekaAPI\VIdeoteka\obj\Debug\net7.0\ref\VIdeoteka.dll
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.csproj.AssemblyReference.cache
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.AssemblyInfoInputs.cache
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.AssemblyInfo.cs
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.csproj.CoreCompileInputs.cache
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.MvcApplicationPartsAssemblyInfo.cs
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.MvcApplicationPartsAssemblyInfo.cache
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.dll
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\refint\VIdeoteka.dll
+D:\C-Sharp\CSHARP\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\obj\Debug\net7.0\VIdeoteka.pdb

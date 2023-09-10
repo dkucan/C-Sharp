@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6OURIkA1pMdPtUVIRRIUh1gYfSc1SKJZNZ72jsKeKWCCh1kckuljOTTED+0DdC92Yn9yU+n4fShKKF6LdTQhDg==",
+  "dgSpecHash": "6udcC0ZIq2JW5wds1V9nykUvZ5AVWapnZJtoaKBq7wXP7WwAjk8U3Kljix/UqPb/4JkN6OI+Hw+cXemiHLzU5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CTU-LA\\Desktop\\VIdeotekaAPI\\VIdeoteka\\VIdeoteka.csproj",
+  "projectFilePath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CTU-LA\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\CTU-LA\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
