@@ -17,6 +17,20 @@ namespace VIdeoteka.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Dohvaća sve kazete iz baze
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    GET api/v1/Kazeta
+        ///
+        /// </remarks>
+        /// <returns>Smjerovi u bazi</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
+        /// 
         [HttpGet]
         public IActionResult Get()
         {
@@ -40,21 +54,27 @@ namespace VIdeoteka.Controllers
 
         }
 
-        /// <summary>
-        /// Dodaje kazetu u bazu
-        /// </summary>
-        /// <remarks>
-        /// Primjer upita:
-        ///
-        ///    POST api/v1/Kazeta
-        ///    {naslov:"",trajanje:90}
-        ///
-        /// </remarks>
-        /// <returns>Kreirana kazeta u bazi s svim podacima</returns>
-        /// <response code="200">Sve je u redu</response>
-        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
-        /// <response code="503">Na azure treba dodati IP u firewall</response
+
+        [HttpPost]
+        public IActionResult Post(KAZETA Kazeta)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                _context.Kazeta.Add(Kazeta);
+                _context.SaveChanges();
+                return StatusCode(StatusCodes.Status201Created, Kazeta);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                   ex.Message);
+            }
+        }
     }
 }
-
-       
+    
