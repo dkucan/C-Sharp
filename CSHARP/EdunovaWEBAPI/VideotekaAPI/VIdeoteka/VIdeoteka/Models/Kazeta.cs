@@ -7,7 +7,7 @@ namespace VIdeoteka.Models
     public class Kazeta : Entitet
     {
         [Key]
-        internal int Sifra { get; set; } // Dodana new ključna riječ
+        public new int Sifra { get; set; } // Dodana new ključna riječ
 
         public string? Naslov { get; set; }
 
