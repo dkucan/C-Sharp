@@ -1,5 +1,6 @@
 ﻿using VIdeoteka.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 
 
 namespace VIdeoteka.Data
@@ -10,6 +11,6 @@ namespace VIdeoteka.Data
         {
         }
 
-        public DbSet<Kazeta> Kazeta { get; set; }
+        public DbSet<KAZETA> Kazeta { get; set; }
     }
 }

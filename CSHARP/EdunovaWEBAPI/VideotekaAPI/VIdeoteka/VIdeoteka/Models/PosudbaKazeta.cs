@@ -2,9 +2,9 @@
 
 namespace VIdeoteka.Models
 {
-    public abstract class PosudbaKazeta
+    public abstract class POSUDBAKAZETA
     {
         [Key]
-     public int Sifra { get; set; }
+        public int Sifra { get; set;  }
     }
 }

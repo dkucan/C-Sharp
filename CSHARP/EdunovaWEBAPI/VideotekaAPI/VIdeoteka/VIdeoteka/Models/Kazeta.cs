@@ -1,16 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 
 namespace VIdeoteka.Models
 {
-    public class Kazeta : PosudbaKazeta
+    public class KAZETA : POSUDBAKAZETA
     {
-        public string? Naslov { get; set; }
+        [Required]
+        public string Naslov { get; set; }
 
         public DateTime Godina_izdanja { get; set; }
 
-        public string? Zanr { get; set; }
+        public string Zanr { get; set; }
 
         public int Cijena_posudbe { get; set; }
         public int Cijena_zakasnine { get; set; }
