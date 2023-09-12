@@ -78,37 +78,40 @@ namespace VIdeoteka.Controllers
 
         [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(int Sifra, KAZETA Kazeta)
+        public IActionResult Put(int sifra, KAZETA Kazeta)
         {
 
-            if (Sifra <= 0 || Kazeta == null)
+            if (sifra <= 0 || Kazeta == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                var KAZETABaza = _context.Kazeta.Find(Sifra);
-                if (KAZETABaza == null)
+                var KazetaBaza = _context.Kazeta.Find(sifra);
+                if (KazetaBaza == null)
                 {
                     return BadRequest();
                 }
-              
-                KAZETABaza.Naslov = Kazeta.Naslov;
-                KAZETABaza.Godina_izdanja = Kazeta.Godina_izdanja;
-                KAZETABaza.Zanr = Kazeta.Zanr;
-                KAZETABaza.Cijena_posudbe = Kazeta.Cijena_posudbe;
-                KAZETABaza.Cijena_zakasnine = Kazeta.Cijena_zakasnine;
+                // inače se rade Mapper-i
+                // mi ćemo za sada ručno
+                KazetaBaza.Naslov = Kazeta.Naslov;
+                KazetaBaza.Godina_izdanja = Kazeta.Godina_izdanja;
+                KazetaBaza.Zanr = Kazeta.Zanr;
+                KazetaBaza.Cijena_posudbe = Kazeta.Cijena_posudbe;
+                KazetaBaza.Cijena_zakasnine = Kazeta.Cijena_zakasnine;
 
-                _context.Kazeta.Update(KAZETABaza);
+                _context.Kazeta.Update(KazetaBaza);
                 _context.SaveChanges();
 
-                return StatusCode(StatusCodes.Status200OK, KAZETABaza);
+                return StatusCode(StatusCodes.Status200OK, KazetaBaza);
 
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                  ex); // kada se vrati cijela instanca ex tada na klijentu imamo više podataka o grešci
+                // nije dobro vraćati cijeli ex ali za dev je OK
             }
         }
         [HttpDelete]
