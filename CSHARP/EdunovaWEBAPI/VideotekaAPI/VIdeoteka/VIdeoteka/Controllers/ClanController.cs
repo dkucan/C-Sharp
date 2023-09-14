@@ -57,6 +57,7 @@ namespace VIdeoteka.Controllers
             {
                 var pdto = new CLANDTO()
                 {
+                    Sifra = p.Sifra,
                     Ime = p.Ime,
                     Prezime = p.Prezime,
                     Adresa = p.Adresa,
@@ -90,7 +91,7 @@ namespace VIdeoteka.Controllers
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
 
         [HttpPost]
-        public IActionResult Post (CLANDTO dto)
+        public IActionResult Post(CLANDTO dto)
         {
             if (ModelState.IsValid)
             {
@@ -100,6 +101,7 @@ namespace VIdeoteka.Controllers
             {
                 Clan p = new Clan()
                 {
+                    Sifra = dto.Sifra,
                     Ime = dto.Ime,
                     Prezime = dto.Prezime,
                     Adresa = dto.Adresa,
@@ -114,12 +116,15 @@ namespace VIdeoteka.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode (StatusCodes.Status503ServiceUnavailable, ex.Message);
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
             }
-           
+
         }
+    }
+}
+
         /// <summary>
-        /// Mijenja podatke postojećeg polaznika u bazi
+        /// Mijenja podatke postojećeg clana u bazi
         /// </summary>
         /// <remarks>
         /// Primjer upita:
@@ -144,26 +149,28 @@ namespace VIdeoteka.Controllers
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
         /// </remarks>
         /// </summary>
-        [HttpPut]
-        [Route("{sifra:int}")]
-        public IActionResult Put (int sifra, CLANDTO pdto)
-        {
-            if (sifra <=0 || pdto == null)
-            {
-                return BadRequest();
-            }
-            ClanBaza.Ime = pdto.Ime;
-            ClanBaza.Prezime = pdto.Prezime;
-            ClanBaza.Adresa = pdto.Adresa;
-            ClanBaza.Mobitel = pdto.Mobitel;
-            ClanBaza.OIB = pdto.OIB;
-            ClanBaza.Datum = pdto.Datum_Uclanjenja,
+//        [HttpPut]
+//        [Route("{sifra:int}")]
+//        public IActionResult Put(int sifra, CLANDTO pdto)
+//        {
+//            if (sifra <= 0 || pdto == null)
+//            {
+//                return BadRequest();
+//            }
+//            ClanBaza.Ime = pdto.Ime;
+//            ClanBaza.Prezime = pdto.Prezime;
+//            ClanBaza.Adresa = pdto.Adresa;
+//            ClanBaza.Mobitel = pdto.Mobitel;
+//            ClanBaza.OIB = pdto.OIB;
+//            ClanBaza.Datum = pdto.Datum_Uclanjenja,
 
-                _videotekaContext.Clan.Update(clanBaza)
+//                _videotekaContext.Clan.Update(clanBaza)
+//        }
+//    }
 
-        }
+//}
+        
 
 
-    }
-}
+
 
