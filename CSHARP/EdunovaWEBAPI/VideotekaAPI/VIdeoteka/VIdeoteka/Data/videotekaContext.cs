@@ -13,7 +13,7 @@ namespace VIdeoteka.Data
 
         public DbSet<KAZETA> Kazeta { get; set; }
 
-        public DbSet<Clan> Clan { get; set; }
+        public DbSet<Clan> clan { get; set; }
 
 
 

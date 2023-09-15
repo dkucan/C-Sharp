@@ -1,10 +1,12 @@
-﻿using System.Linq.Expressions;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Linq.Expressions;
 
 namespace VIdeoteka.Models
 {
     public class Clan : POSUDBAKAZETA
     {
-        public int sifra { get; set; }
+        [Key]
+        public int Sifra { get; set; }
         public string? Ime { get; set; }
         public string? Prezime { get; set; }
         public string? Adresa { get; set; }

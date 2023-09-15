@@ -44,7 +44,7 @@ namespace VIdeoteka.Controllers
                 return BadRequest(ModelState);
             }
 
-            var clan = _videotekaContext.Clan.ToList();
+            var clan = _videotekaContext.clan.ToList();
             if (clan == null || clan.Count == 0)
             {
                 return new EmptyResult();
@@ -93,7 +93,7 @@ namespace VIdeoteka.Controllers
         [HttpPost]
         public IActionResult Post(CLANDTO dto)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
@@ -109,7 +109,7 @@ namespace VIdeoteka.Controllers
                     OIB = dto.OIB,
                     Datum_Uclanjenja = dto.Datum_Uclanjenja,
                 };
-                _videotekaContext.Clan.Add(p);
+                _videotekaContext.clan.Add(p);
                 _videotekaContext.SaveChanges();
                 dto.Sifra = p.Sifra;
                 return Ok(dto);
@@ -120,8 +120,7 @@ namespace VIdeoteka.Controllers
             }
 
         }
-    }
-}
+
 
         /// <summary>
         /// Mijenja podatke postojećeg clana u bazi
@@ -147,28 +146,91 @@ namespace VIdeoteka.Controllers
         /// <response code="204">Nema u bazi clana kojeg želimo promijeniti</response>
         /// <response code="415">Nismo poslali JSON</response> 
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
-        /// </remarks>
+
+        [HttpPut]
+        [Route("{Sifra:int}")]
+
+        public IActionResult Put(int Sifra, CLANDTO pdto)
+        {
+            if (Sifra <= 0 || pdto == null)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var clan = _videotekaContext.clan.Find(Sifra);
+                if (clan == null)
+                {
+                    return BadRequest();
+                }
+                clan.Ime = pdto.Ime;
+                clan.Prezime = pdto.Prezime;
+                clan.Adresa = pdto.Adresa;
+                clan.Mobitel = pdto.Mobitel;
+                clan.OIB = pdto.OIB;
+                clan.Datum_Uclanjenja = pdto.Datum_Uclanjenja;
+
+                _videotekaContext.clan.Update(clan);
+                _videotekaContext.SaveChanges();
+                pdto.Sifra = clan.Sifra;
+                return StatusCode(StatusCodes.Status200OK, pdto);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
+            }
+        }
+
+        /// <summary>
+        /// Briše clana iz baze
         /// </summary>
-//        [HttpPut]
-//        [Route("{sifra:int}")]
-//        public IActionResult Put(int sifra, CLANDTO pdto)
-//        {
-//            if (sifra <= 0 || pdto == null)
-//            {
-//                return BadRequest();
-//            }
-//            ClanBaza.Ime = pdto.Ime;
-//            ClanBaza.Prezime = pdto.Prezime;
-//            ClanBaza.Adresa = pdto.Adresa;
-//            ClanBaza.Mobitel = pdto.Mobitel;
-//            ClanBaza.OIB = pdto.OIB;
-//            ClanBaza.Datum = pdto.Datum_Uclanjenja,
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    DELETE api/v1/Polaznik/1
+        ///    
+        /// </remarks>
+        /// <param name="sifra">Šifra polaznika koji se briše</param>  
+        /// <returns>Odgovor da li je obrisano ili ne</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="204">Nema u bazi polaznika kojeg želimo obrisati</response>
+        /// <response code="415">Nismo poslali JSON</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
+        [HttpDelete]
+        [Route("{Sifra:int}")]
+        [Produces("application/json")]
+        public IActionResult Delete(int Sifra)
+        {
+            if (Sifra <= 0)
+            {
+                return BadRequest();
+            }
 
-//                _videotekaContext.Clan.Update(clanBaza)
-//        }
-//    }
+            var clan = _videotekaContext.clan.Find(Sifra);
+            if (clan == null)
+            {
+                return BadRequest();
+            }
 
-//}
+            try
+            {
+                _videotekaContext.clan.Remove(clan);
+                _videotekaContext.SaveChanges();
+
+                return new JsonResult("{\"poruka\":\"Obrisano\"}");
+
+            }
+            catch (Exception ex)
+            {
+
+                return new JsonResult("{\"poruka\":\"Ne može se obrisati\"}");
+
+            }
+
+        }
+    }
+}
+
         
 
 
