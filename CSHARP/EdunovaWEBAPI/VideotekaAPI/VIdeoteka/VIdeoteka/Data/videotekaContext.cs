@@ -15,7 +15,17 @@ namespace VIdeoteka.Data
 
         public DbSet<Clan> clan { get; set; }
 
+        public DbSet<Posudba> posudba { get; set; }
+
+        public DbSet<POSUDBAKAZETA> PosudbaKazeta { get; set; }
+
+        protected override void OnModelCreating(
+           ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<POSUDBAKAZETA>().HasOne(a => a.Kazeta);
+            modelBuilder.Entity<KAZETA>().HasOne(a => a.Naslov);
 
 
+        }
     }
 }
