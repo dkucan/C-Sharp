@@ -24,18 +24,18 @@ namespace VIdeoteka.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             try
             {
-                var posudbe = _videotekaContext.posudba
-                    .Include(p => p.Kazete)
-                    .ToList();
-
-                if (posudbe == null || posudbe.Count == 0)
+                var posudba = _videotekaContext.posudba.ToList();
+                if (posudba == null || posudba.Count == 0)
                 {
-                    return NotFound(); // Vraćamo 404 ako nema posudbi
+                    return new EmptyResult();
                 }
-
-                return Ok(posudbe);
+                return new JsonResult(_videotekaContext.posudba.ToList());
             }
             catch (Exception ex)
             {
@@ -54,7 +54,7 @@ namespace VIdeoteka.Controllers
             {
                 _videotekaContext.posudba.Add(posudba);
                 _videotekaContext.SaveChanges();
-                return CreatedAtAction(nameof(Get), new { Sifra = posudba.Sifra }, posudba);
+                return StatusCode(StatusCodes.Status201Created, posudba);
             }
             catch (Exception ex)
             {
@@ -74,23 +74,23 @@ namespace VIdeoteka.Controllers
 
             try
             {
-                var posudbe = _videotekaContext.posudba.Find(sifra);
-                if (posudbe == null)
+                var novaPosudba= _videotekaContext.posudba.Find(sifra);
+                if (novaPosudba == null)
                 {
                     return BadRequest();
                 }
                 // inače se rade Mapper-i
                 // mi ćemo za sada ručno
-                posudbe.Datum_Posudbe = posudbe.Datum_Posudbe;
-                posudbe.Datum_Vracanja = posudbe.Datum_Vracanja;
-                posudbe.Clan = posudbe.Clan;
-                posudbe.Zakasnina = posudbe.Zakasnina;
+                novaPosudba.Datum_Posudbe = posudba.Datum_Posudbe;
+                novaPosudba.Datum_Vracanja = posudba.Datum_Vracanja;
+                novaPosudba.Clan = posudba.Clan;
+                novaPosudba.Zakasnina = posudba.Zakasnina;
 
-                _videotekaContext.posudba.Update(posudbe);
+                _videotekaContext.posudba.Update(novaPosudba);
                 _videotekaContext.SaveChanges();
 
-                return StatusCode(StatusCodes.Status200OK, posudbe);
-
+                return StatusCode(StatusCodes.Status200OK, novaPosudba);
+                
             }
             catch (Exception ex)
             {
@@ -112,13 +112,13 @@ namespace VIdeoteka.Controllers
 
             try
             {
-                var posudba = _videotekaContext.posudba.Find(sifra);
-                if (posudba == null)
+                var novaPosudba = _videotekaContext.posudba.Find(sifra);
+                if (novaPosudba == null)
                 {
                     return BadRequest();
                 }
 
-                _videotekaContext.posudba.Remove(posudba);
+                _videotekaContext.posudba.Remove(novaPosudba);
                 _videotekaContext.SaveChanges();
 
                 return new JsonResult("{\"poruka\":\"Obrisano\"}");
