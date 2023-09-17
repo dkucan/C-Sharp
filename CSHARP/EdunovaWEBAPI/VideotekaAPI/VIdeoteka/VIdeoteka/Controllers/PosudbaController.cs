@@ -30,8 +30,8 @@ namespace VIdeoteka.Controllers
             }
             try
             {
-                var posudba = _videotekaContext.posudba.ToList();
-                if (posudba == null || posudba.Count == 0)
+                var novaPosudba = _videotekaContext.posudba.ToList();
+                if (novaPosudba == null || novaPosudba.Count == 0)
                 {
                     return new EmptyResult();
                 }
@@ -81,10 +81,10 @@ namespace VIdeoteka.Controllers
                 }
                 // inače se rade Mapper-i
                 // mi ćemo za sada ručno
-                novaPosudba.Datum_Posudbe = posudba.Datum_Posudbe;
-                novaPosudba.Datum_Vracanja = posudba.Datum_Vracanja;
-                novaPosudba.Clan = posudba.Clan;
-                novaPosudba.Zakasnina = posudba.Zakasnina;
+                posudba.Datum_posudbe = novaPosudba.Datum_posudbe;
+                posudba.Datum_vracanja = novaPosudba.Datum_vracanja;
+                posudba.Clan = novaPosudba.Clan;
+                posudba.Zakasnina = novaPosudba.Zakasnina;
 
                 _videotekaContext.posudba.Update(novaPosudba);
                 _videotekaContext.SaveChanges();
