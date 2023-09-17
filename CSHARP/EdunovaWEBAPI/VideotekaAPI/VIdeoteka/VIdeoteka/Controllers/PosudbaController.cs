@@ -6,6 +6,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Http;
 using VIdeoteka.Data;
 using VIdeoteka.Models;
+using Microsoft.Data.SqlClient;
 
 namespace VIdeoteka.Controllers
 {
@@ -42,28 +43,6 @@ namespace VIdeoteka.Controllers
             }
         }
 
-        [HttpGet("{Sifra}")]
-        public IActionResult GetPosudba(int id)
-        {
-            try
-            {
-                var posudba = _videotekaContext.posudba
-                    .Include(p => p.Kazete)
-                    .SingleOrDefault(p => p.Sifra == id);
-
-                if (posudba == null)
-                {
-                    return NotFound(); // Vraćamo 404 ako posudba s traženim ID-om ne postoji
-                }
-
-                return Ok(posudba);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
-            }
-        }
-
         [HttpPost]
         public IActionResult Post(Posudba posudba)
         {
@@ -75,7 +54,7 @@ namespace VIdeoteka.Controllers
             {
                 _videotekaContext.posudba.Add(posudba);
                 _videotekaContext.SaveChanges();
-                return CreatedAtAction(nameof(GetPosudba), new { id = posudba.Sifra }, posudba);
+                return CreatedAtAction(nameof(Get), new { Sifra = posudba.Sifra }, posudba);
             }
             catch (Exception ex)
             {
@@ -83,45 +62,84 @@ namespace VIdeoteka.Controllers
             }
         }
 
-        [HttpPut("{Sifra}")]
-        public IActionResult Put(int id, Posudba posudba)
+        [HttpPut]
+        [Route("{sifra:int}")]
+        public IActionResult Put(int sifra, KAZETA Kazeta)
         {
-            if (id != posudba.Sifra || !_videotekaContext.posudba.Any(p => p.Sifra == id))
+
+            if (sifra <= 0 || Kazeta == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                _videotekaContext.Entry(posudba).State = EntityState.Modified;
+                var posudbe = _videotekaContext.posudba.Find(sifra);
+                if (posudbe == null)
+                {
+                    return BadRequest();
+                }
+                // inače se rade Mapper-i
+                // mi ćemo za sada ručno
+                posudbe.Datum_Posudbe = posudbe.Datum_Posudbe;
+                posudbe.Datum_Vracanja = posudbe.Datum_Vracanja;
+                posudbe.Clan = posudbe.Clan;
+                posudbe.Zakasnina = posudbe.Zakasnina;
+
+                _videotekaContext.Kazeta.Update(posudbe);
                 _videotekaContext.SaveChanges();
 
-                return Ok(posudba);
+                return StatusCode(StatusCodes.Status200OK, posudbe);
+
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                  ex); // kada se vrati cijela instanca ex tada na klijentu imamo više podataka o grešci
+                // nije dobro vraćati cijeli ex ali za dev je OK
             }
         }
 
-        [HttpDelete("{Sifra}")]
-        public IActionResult Delete(int id)
+        [HttpDelete]
+        [Route("{sifra:int}")]
+        [Produces("application/json")]
+        public IActionResult Delete(int sifra)
         {
-            var posudba = _videotekaContext.posudba.Find(id);
-            if (posudba == null)
+            if (sifra <= 0)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             try
             {
+                var posudba = _videotekaContext.posudba.Find(sifra);
+                if (posudba == null)
+                {
+                    return BadRequest();
+                }
+
                 _videotekaContext.posudba.Remove(posudba);
                 _videotekaContext.SaveChanges();
-                return Ok(new { poruka = "Obrisano" });
+
+                return new JsonResult("{\"poruka\":\"Obrisano\"}");
+
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+
+                try
+                {
+                    SqlException sqle = (SqlException)ex;
+                    return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                  sqle);
+                }
+                catch (Exception e)
+                {
+
+                }
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                  ex);
             }
         }
     }
