@@ -3,16 +3,13 @@ using System.Linq.Expressions;
 
 namespace VIdeoteka.Models
 {
-    public class Clan : Entitet
+    public class clan : Entitet
     {
-        [Key]
-        public int Sifra { get; set; }
         public string? Ime { get; set; }
         public string? Prezime { get; set; }
         public string? Adresa { get; set; }
         public string? Mobitel { get; set; }
         public string? OIB { get; set; }
-        public DateTime Datum_Uclanjenja { get; set; }
-
+        public DateTime? Datum_uclanjenja { get; set; }
     }
 }

@@ -1,13 +1,14 @@
-﻿using VIdeoteka.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.AspNetCore.Http;
+using VIdeoteka.Data;
 using VIdeoteka.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 
 namespace VIdeoteka.Controllers
 {
-    /// <summary>
-    /// Namijenjeno za CRUD operacije sa entitetom POSUDBA u bazi
-    /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
     public class PosudbaController : ControllerBase
@@ -18,22 +19,22 @@ namespace VIdeoteka.Controllers
         {
             _videotekaContext = videotekaContext;
         }
-        [HttpGet]
 
+        [HttpGet]
         public IActionResult Get()
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
             try
             {
-                var posudba = _videotekaContext.posudba.ToList();
-                if (posudba == null || posudba.Count == 0)
+                var posudbe = _videotekaContext.posudba
+                    .Include(p => p.Kazete)
+                    .ToList();
+
+                if (posudbe == null || posudbe.Count == 0)
                 {
-                    return new EmptyResult();
+                    return NotFound(); // Vraćamo 404 ako nema posudbi
                 }
-                return new JsonResult(_videotekaContext.posudba.ToList());
+
+                return Ok(posudbe);
             }
             catch (Exception ex)
             {
@@ -41,22 +42,30 @@ namespace VIdeoteka.Controllers
             }
         }
 
-        /// <summary>
-        /// Dodaje posudbu u bazu
-        /// </summary>
-        /// <remarks>
-        /// Primjer upita:
-        ///
-        ///    POST api/v1/Posudba
-        ///    {naziv:"",trajanje:100}
-        ///
-        /// </remarks>
-        /// <returns>Kreirana posudba u bazi s svim podacima</returns>
-        /// <response code="200">Sve je u redu</response>
-        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
-        /// <response code="503">Na azure treba dodati IP u firewall</response> 
+        [HttpGet("{Sifra}")]
+        public IActionResult GetPosudba(int id)
+        {
+            try
+            {
+                var posudba = _videotekaContext.posudba
+                    .Include(p => p.Kazete)
+                    .SingleOrDefault(p => p.Sifra == id);
+
+                if (posudba == null)
+                {
+                    return NotFound(); // Vraćamo 404 ako posudba s traženim ID-om ne postoji
+                }
+
+                return Ok(posudba);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+        }
+
         [HttpPost]
-        public IActionResult Post(Posudba Posudba)
+        public IActionResult Post(Posudba posudba)
         {
             if (!ModelState.IsValid)
             {
@@ -64,15 +73,56 @@ namespace VIdeoteka.Controllers
             }
             try
             {
-                _videotekaContext.posudba.Add(Posudba);
+                _videotekaContext.posudba.Add(posudba);
                 _videotekaContext.SaveChanges();
-                return StatusCode(StatusCodes.Status201Created, Posudba);
-            } catch (Exception ex) { }
-            {
-                return BadRequest(ModelState);
+                return CreatedAtAction(nameof(GetPosudba), new { id = posudba.Sifra }, posudba);
             }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+        }
+
+        [HttpPut("{Sifra}")]
+        public IActionResult Put(int id, Posudba posudba)
+        {
+            if (id != posudba.Sifra || !_videotekaContext.posudba.Any(p => p.Sifra == id))
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                _videotekaContext.Entry(posudba).State = EntityState.Modified;
+                _videotekaContext.SaveChanges();
+
+                return Ok(posudba);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+        }
+
+        [HttpDelete("{Sifra}")]
+        public IActionResult Delete(int id)
+        {
+            var posudba = _videotekaContext.posudba.Find(id);
+            if (posudba == null)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                _videotekaContext.posudba.Remove(posudba);
+                _videotekaContext.SaveChanges();
+                return Ok(new { poruka = "Obrisano" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
             }
         }
     }
-
-
+}

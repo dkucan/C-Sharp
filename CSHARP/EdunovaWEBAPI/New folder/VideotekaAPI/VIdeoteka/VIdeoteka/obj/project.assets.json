@@ -3881,11 +3881,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C-Sharp-main (1)\\C-Sharp-main\\CSHARP\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\VIdeoteka.csproj",
+      "projectUniqueName": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\New folder\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\VIdeoteka.csproj",
       "projectName": "VIdeoteka",
-      "projectPath": "C:\\C-Sharp-main (1)\\C-Sharp-main\\CSHARP\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\VIdeoteka.csproj",
+      "projectPath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\New folder\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\VIdeoteka.csproj",
       "packagesPath": "C:\\Users\\CTU-LA\\.nuget\\packages\\",
-      "outputPath": "C:\\C-Sharp-main (1)\\C-Sharp-main\\CSHARP\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\obj\\",
+      "outputPath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\New folder\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

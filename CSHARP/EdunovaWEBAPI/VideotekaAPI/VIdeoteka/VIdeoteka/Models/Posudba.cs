@@ -1,14 +1,23 @@
-﻿namespace VIdeoteka.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace VIdeoteka.Models
 {
     public class Posudba : Entitet
     {
-        public string Naslov { get; set; }
-        public string Kazete { get; set; }
-        public DateTime DatumPosudbe { get; set; }
-        public DateTime DatumPovrata { get; set; }
-        public List<Clan> Članovi { get; set; }
 
-        public int cijenaPosudbe { get; set; }
-        public int cijenaZakasnine { get; set; }
+       
+        [Key]
+        public clan? Clan { get; set; }
+        [ForeignKey("clan")]
+        public List <KAZETA> Kazete { get; set; }
+        public DateTime? Datum_Posudbe { get; set; }
+        public DateTime? Datum_Vracanja { get; set; }
+        public int Zakasnina { get; set; }  
+      
+
     }
+
+
 }
+

@@ -44,7 +44,7 @@ namespace VIdeoteka.Controllers
                 return BadRequest(ModelState);
             }
 
-            var clan = _videotekaContext.clan.ToList();
+            var clan = _videotekaContext.Clan.ToList();
             if (clan == null || clan.Count == 0)
             {
                 return new EmptyResult();
@@ -63,7 +63,7 @@ namespace VIdeoteka.Controllers
                     Adresa = p.Adresa,
                     Mobitel = p.Mobitel,
                     OIB = p.OIB,
-                    Datum_Uclanjenja = p.Datum_Uclanjenja,
+                    //Datum_uclanjenja = p.Datum_uclanjenja
                 };
 
                 vrati.Add(pdto);
@@ -99,7 +99,7 @@ namespace VIdeoteka.Controllers
             }
             try
             {
-                Clan p = new Clan()
+                clan p = new clan()
                 {
                     Sifra = dto.Sifra,
                     Ime = dto.Ime,
@@ -107,9 +107,9 @@ namespace VIdeoteka.Controllers
                     Adresa = dto.Adresa,
                     Mobitel = dto.Mobitel,
                     OIB = dto.OIB,
-                    Datum_Uclanjenja = dto.Datum_Uclanjenja,
+                    Datum_uclanjenja = dto.Datum_uclanjenja,
                 };
-                _videotekaContext.clan.Add(p);
+                _videotekaContext.Clan.Add(p);
                 _videotekaContext.SaveChanges();
                 dto.Sifra = p.Sifra;
                 return Ok(dto);
@@ -158,7 +158,7 @@ namespace VIdeoteka.Controllers
             }
             try
             {
-                var clan = _videotekaContext.clan.Find(Sifra);
+                var clan = _videotekaContext.Clan.Find(Sifra);
                 if (clan == null)
                 {
                     return BadRequest();
@@ -168,9 +168,9 @@ namespace VIdeoteka.Controllers
                 clan.Adresa = pdto.Adresa;
                 clan.Mobitel = pdto.Mobitel;
                 clan.OIB = pdto.OIB;
-                clan.Datum_Uclanjenja = pdto.Datum_Uclanjenja;
+                clan.Datum_uclanjenja = pdto.Datum_uclanjenja;
 
-                _videotekaContext.clan.Update(clan);
+                _videotekaContext.Clan.Update(clan);
                 _videotekaContext.SaveChanges();
                 pdto.Sifra = clan.Sifra;
                 return StatusCode(StatusCodes.Status200OK, pdto);
@@ -206,15 +206,15 @@ namespace VIdeoteka.Controllers
                 return BadRequest();
             }
 
-            var clan = _videotekaContext.clan.Find(Sifra);
-            if (clan == null)
+            var Clan = _videotekaContext.Clan.Find(Sifra);
+            if (Clan == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                _videotekaContext.clan.Remove(clan);
+                _videotekaContext.Clan.Remove(Clan);
                 _videotekaContext.SaveChanges();
 
                 return new JsonResult("{\"poruka\":\"Obrisano\"}");
