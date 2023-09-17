@@ -64,10 +64,10 @@ namespace VIdeoteka.Controllers
 
         [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(int sifra, KAZETA Kazeta)
+        public IActionResult Put(int sifra, Posudba posudba)
         {
 
-            if (sifra <= 0 || Kazeta == null)
+            if (sifra <= 0 || posudba == null)
             {
                 return BadRequest();
             }
@@ -86,7 +86,7 @@ namespace VIdeoteka.Controllers
                 posudbe.Clan = posudbe.Clan;
                 posudbe.Zakasnina = posudbe.Zakasnina;
 
-                _videotekaContext.Kazeta.Update(posudbe);
+                _videotekaContext.posudba.Update(posudbe);
                 _videotekaContext.SaveChanges();
 
                 return StatusCode(StatusCodes.Status200OK, posudbe);
