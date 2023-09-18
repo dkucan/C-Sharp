@@ -4,13 +4,12 @@ namespace VIdeoteka.Models.DTO
 {
     public class PosudbaDTO
     {
-        [ForeignKey("clan")]
-        public clan? Clan { get; set; }
+        public string Clan { get; set; }
         public List<KAZETA> Kazete { get; set; } = new();
         public DateTime? Datum_posudbe { get; set; }
         public DateTime? Datum_vracanja { get; set; }
         public int Zakasnina { get; set; }
 
-        public int Sifra { get; internal set; }
+        public int Sifra { get; set; }
     }
 }
