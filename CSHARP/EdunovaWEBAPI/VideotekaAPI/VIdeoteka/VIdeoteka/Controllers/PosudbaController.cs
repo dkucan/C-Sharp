@@ -7,140 +7,101 @@ using Microsoft.AspNetCore.Http;
 using VIdeoteka.Data;
 using VIdeoteka.Models;
 using Microsoft.Data.SqlClient;
+using VIdeoteka.Models.DTO;
 
 namespace VIdeoteka.Controllers
 {
+    /// <summary>
+    /// Namijenjeno za CRUD operacije nad posudbom
+    /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
+
     public class PosudbaController : ControllerBase
     {
-        private readonly videotekaContext _videotekaContext;
+        private readonly videotekaContext _context;
+        private readonly ILogger<PosudbaController> _logger;
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
+        /// <param name="context"></param>
 
-        public PosudbaController(videotekaContext videotekaContext)
+        public PosudbaController(videotekaContext context,
+            ILogger<PosudbaController> logger)
         {
-            _videotekaContext = videotekaContext;
+            _context = context;
+            _logger = logger;
         }
-
         [HttpGet]
         public IActionResult Get()
         {
+            _logger.LogInformation("Dohvaćam grupe");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
             try
             {
-                var novaPosudba = _videotekaContext.posudba.ToList();
-                if (novaPosudba == null || novaPosudba.Count == 0)
+                var posudba = _context.posudba
+                    .Include(g => g.Kazete)
+                    .Include(g => g.Clan)
+                    .ToList();
+
+                if (posudba == null || posudba.Count == 0)
                 {
                     return new EmptyResult();
                 }
-                return new JsonResult(_videotekaContext.posudba.ToList());
+                List<PosudbaDTO> vrati = new();
+
+                posudba.ForEach(g =>
+                {
+                    vrati.Add(new PosudbaDTO()
+                    {
+                        Clan = g.Clan,
+                        Datum_posudbe = g.Datum_posudbe,
+                        Datum_vracanja = g.Datum_vracanja,
+                        Zakasnina = g.Zakasnina,
+
+                    });
+                });
+                return Ok(vrati);
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
-            }
-        }
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
 
-        [HttpPost]
-        public IActionResult Post(Posudba posudba)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            try
-            {
-                _videotekaContext.posudba.Add(posudba);
-                _videotekaContext.SaveChanges();
-                return StatusCode(StatusCodes.Status201Created, posudba);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
-            }
-        }
-
-        [HttpPut]
-        [Route("{sifra:int}")]
-        public IActionResult Put(int sifra, Posudba posudba)
-        {
-
-            if (sifra <= 0 || posudba == null)
-            {
-                return BadRequest();
-            }
-
-            try
-            {
-                var novaPosudba= _videotekaContext.posudba.Find(sifra);
-                if (novaPosudba == null)
-                {
-                    return BadRequest();
-                }
-                // inače se rade Mapper-i
-                // mi ćemo za sada ručno
-                posudba.Datum_posudbe = novaPosudba.Datum_posudbe;
-                posudba.Datum_vracanja = novaPosudba.Datum_vracanja;
-                posudba.Clan = novaPosudba.Clan;
-                posudba.Zakasnina = novaPosudba.Zakasnina;
-
-                _videotekaContext.posudba.Update(novaPosudba);
-                _videotekaContext.SaveChanges();
-
-                return StatusCode(StatusCodes.Status200OK, novaPosudba);
-                
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                  ex); // kada se vrati cijela instanca ex tada na klijentu imamo više podataka o grešci
-                // nije dobro vraćati cijeli ex ali za dev je OK
-            }
-        }
-
-        [HttpDelete]
-        [Route("{sifra:int}")]
-        [Produces("application/json")]
-        public IActionResult Delete(int sifra)
-        {
-            if (sifra <= 0)
-            {
-                return BadRequest();
-            }
-
-            try
-            {
-                var novaPosudba = _videotekaContext.posudba.Find(sifra);
-                if (novaPosudba == null)
-                {
-                    return BadRequest();
-                }
-
-                _videotekaContext.posudba.Remove(novaPosudba);
-                _videotekaContext.SaveChanges();
-
-                return new JsonResult("{\"poruka\":\"Obrisano\"}");
-
-            }
-            catch (Exception ex)
-            {
-
-                try
-                {
-                    SqlException sqle = (SqlException)ex;
-                    return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                  sqle);
-                }
-                catch (Exception e)
-                {
-
-                }
-
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                  ex);
             }
         }
     }
 }
+//[HttpPost]
+//public IActionResult Post(PosudbaDTO posudbaDTO)
+//{
+//    if (!ModelState.IsValid)
+//    {
+//        return BadRequest(ModelState);
+//    }
+//    if (posudbaDTO.Sifra <= 0)
+//    {
+//        return BadRequest(ModelState);
+//    }
+//    try
+//    {
+//        var kazeta = _context.Kazeta.Find(posudbaDTO.Sifra)
+//                    if (kazeta == null)
+//        {
+//            return BadRequest(ModelState);
+//        }
+//        Posudba g = new();
+//        {
+//            Naslov = posudbaDTO.Naslov,
+                        
+
+
+
+//                }
+
+//            }
+//        }
+//    }
+//}

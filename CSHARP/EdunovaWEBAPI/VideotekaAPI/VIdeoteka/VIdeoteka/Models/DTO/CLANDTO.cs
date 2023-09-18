@@ -9,5 +9,7 @@
         public string? Mobitel { get; set; }
         public string? OIB { get; set; }
         public DateTime Datum_uclanjenja { get; set; }
+
+      
     }
 }
