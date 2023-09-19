@@ -11,5 +11,7 @@ namespace VIdeoteka.Models
         public string? Mobitel { get; set; }
         public string? OIB { get; set; }
         public DateTime? Datum_uclanjenja { get; set; }
+
+        public ICollection<Posudba> posudba { get; } = new List<Posudba>();
     }
 }
