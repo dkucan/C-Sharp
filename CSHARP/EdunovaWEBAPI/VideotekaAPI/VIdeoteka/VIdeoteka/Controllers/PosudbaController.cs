@@ -72,85 +72,87 @@ namespace VIdeoteka.Controllers
 
             }
         }
-        //[HttpPost]
-        //public IActionResult Post (PosudbaDTO posudbaDTO)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
-        //    if (posudbaDTO.Sifra <=0)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
-        //    try
-        //    {
-        //        var posudba = _context.posudba.Find(posudbaDTO.Sifra);
-        //        if (posudba == null)
-        //        {
-        //            return BadRequest(ModelState);
-        //        }
-        //        Posudba g = new()
-        //        {
-        //            Datum_posudbe = posudbaDTO.Datum_posudbe,
-        //            Datum_vracanja = posudbaDTO.Datum_vracanja,
-        //            Zakasnina = posudbaDTO.Zakasnina
+        [HttpPost]
+        public IActionResult Post(PosudbaDTO posudbaDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            if (posudbaDTO.Sifra <= 0)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var kazeta = _context.posudba.Find(posudbaDTO.Sifra);
+                if (kazeta == null)
+                {
+                    return BadRequest(ModelState);
+                }
+                Posudba g = new()
+                {
+                   
+                    Datum_posudbe = posudbaDTO.Datum_posudbe,
+                    Datum_vracanja = posudbaDTO.Datum_vracanja,
+                    Zakasnina = posudbaDTO.Zakasnina,
+                };
+                _context.posudba.Add(g);
+                _context.SaveChanges();
 
-        //        };
-        //        _context.posudba.Add(g);
-        //        _context.SaveChanges();
+                posudbaDTO.Sifra = g.Sifra;
+                posudbaDTO.Kazete = g.Kazete;
 
-        //        posudbaDTO.Sifra = g.Sifra;
-        //        posudbaDTO.Clan = posudba.clan;
-
-        //        return Ok(posudbaDTO);
+                return Ok(posudbaDTO);
 
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode (StatusCodes.Status503ServiceUnavailable, ex);
-        //    }
-        //}
-        //[HttpPut]
-        //[Route("{Sifra:int}")]
-        //public IActionResult Put (int Sifra, PosudbaDTO posudbaDTO)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest();
-        //    }
-        //    if (Sifra <=0 || posudbaDTO == null)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
-        //    try
-        //    {
-        //        var kazete = _context.Kazeta.Find(posudbaDTO.Sifra);
-        //        if (kazete == null)
-        //        {
-        //            return BadRequest();
-        //        }
-        //        var posudba = _context.posudba.Find(Sifra);
-        //        if (posudba == null)
-        //        {
-        //            return BadRequest(ModelState);
-        //        }
-        //        posudba.Clan = posudbaDTO.Clan;
-        //        posudba.Datum_vracanja = posudbaDTO.Datum_vracanja;
-        //        posudba.Datum_posudbe = posudbaDTO.Datum_posudbe;
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
+            }
+        }
+        [HttpPut]
+        [Route("{Sifra:int}")]
+        public IActionResult Put(int Sifra, PosudbaDTO posudbaDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            if (Sifra <= 0 || posudbaDTO == null)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var kazete = _context.Kazeta.Find(posudbaDTO.Sifra);
+                if (kazete == null)
+                {
+                    return BadRequest();
+                }
+                var posudba = _context.posudba.Find(Sifra);
+                if (posudba == null)
+                {
+                    return BadRequest(ModelState);
+                }
+                posudba.Sifra = posudbaDTO.Sifra;
+                posudba.Datum_posudbe = posudbaDTO.Datum_posudbe;
+                posudba.Datum_vracanja = posudbaDTO.Datum_vracanja;
+                posudba.Zakasnina = posudbaDTO.Zakasnina;
 
-        //        _context.posudba.Update(posudba);
-        //        _context.SaveChanges();
 
-        //        return Ok(posudbaDTO);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
-        //    }
+                _context.posudba.Update(posudba);
+                _context.SaveChanges();
 
-        //}
+                return Ok(posudbaDTO);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+
+        }
         [HttpDelete]
         [Route("{Sifra:int}")]
         [Produces("application/json")]
