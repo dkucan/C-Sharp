@@ -1,0 +1,15 @@
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\bin\Debug\net6.0\E02UvjetnoGrananjeSwitch.exe
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\bin\Debug\net6.0\E02UvjetnoGrananjeSwitch.deps.json
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\bin\Debug\net6.0\E02UvjetnoGrananjeSwitch.runtimeconfig.json
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\bin\Debug\net6.0\E02UvjetnoGrananjeSwitch.dll
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\bin\Debug\net6.0\E02UvjetnoGrananjeSwitch.pdb
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\E02UvjetnoGrananjeSwitch.csproj.AssemblyReference.cache
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\E02UvjetnoGrananjeSwitch.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\E02UvjetnoGrananjeSwitch.AssemblyInfoInputs.cache
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\E02UvjetnoGrananjeSwitch.AssemblyInfo.cs
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\E02UvjetnoGrananjeSwitch.csproj.CoreCompileInputs.cache
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\E02UvjetnoGrananjeSwitch.dll
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\refint\E02UvjetnoGrananjeSwitch.dll
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\E02UvjetnoGrananjeSwitch.pdb
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\E02UvjetnoGrananjeSwitch.genruntimeconfig.cache
+D:\C-Sharp\CSHARP\Console03\E02UvjetnoGrananjeSwitch\obj\Debug\net6.0\ref\E02UvjetnoGrananjeSwitch.dll

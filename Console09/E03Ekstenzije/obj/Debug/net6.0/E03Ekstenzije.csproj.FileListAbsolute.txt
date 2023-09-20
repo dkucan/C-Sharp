@@ -1,0 +1,15 @@
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\bin\Debug\net6.0\E03Ekstenzije.exe
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\bin\Debug\net6.0\E03Ekstenzije.deps.json
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\bin\Debug\net6.0\E03Ekstenzije.runtimeconfig.json
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\bin\Debug\net6.0\E03Ekstenzije.dll
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\bin\Debug\net6.0\E03Ekstenzije.pdb
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\E03Ekstenzije.csproj.AssemblyReference.cache
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\E03Ekstenzije.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\E03Ekstenzije.AssemblyInfoInputs.cache
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\E03Ekstenzije.AssemblyInfo.cs
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\E03Ekstenzije.csproj.CoreCompileInputs.cache
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\E03Ekstenzije.dll
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\refint\E03Ekstenzije.dll
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\E03Ekstenzije.pdb
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\E03Ekstenzije.genruntimeconfig.cache
+D:\C-Sharp\CSHARP\Console09\E03Ekstenzije\obj\Debug\net6.0\ref\E03Ekstenzije.dll
