@@ -4,7 +4,7 @@ namespace VIdeoteka.Models.DTO
 {
     public class PosudbaDTO
     {
-        public string Clan { get; set; }
+        public string? Clan { get; set; }
         public List<KAZETA> Kazete { get; set; } = new();
         public DateTime? Datum_posudbe { get; set; }
         public DateTime? Datum_vracanja { get; set; }
