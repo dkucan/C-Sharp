@@ -63,7 +63,7 @@ namespace VIdeoteka.Controllers
                     Adresa = p.Adresa,
                     Mobitel = p.Mobitel,
                     OIB = p.OIB,
-                    //Datum_uclanjenja = p.Datum_uclanjenja
+                    Datum_uclanjenja = p.Datum_uclanjenja
                 };
 
                 vrati.Add(pdto);

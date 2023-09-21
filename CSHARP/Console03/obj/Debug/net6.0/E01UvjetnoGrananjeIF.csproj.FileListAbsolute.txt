@@ -1,5 +1,0 @@
-D:\C-Sharp\CSHARP\Console03\obj\Debug\net6.0\E01UvjetnoGrananjeIF.csproj.AssemblyReference.cache
-D:\C-Sharp\CSHARP\Console03\obj\Debug\net6.0\E01UvjetnoGrananjeIF.GeneratedMSBuildEditorConfig.editorconfig
-D:\C-Sharp\CSHARP\Console03\obj\Debug\net6.0\E01UvjetnoGrananjeIF.AssemblyInfoInputs.cache
-D:\C-Sharp\CSHARP\Console03\obj\Debug\net6.0\E01UvjetnoGrananjeIF.AssemblyInfo.cs
-D:\C-Sharp\CSHARP\Console03\obj\Debug\net6.0\E01UvjetnoGrananjeIF.csproj.CoreCompileInputs.cache

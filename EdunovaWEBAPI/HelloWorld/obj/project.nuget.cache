@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SuajXmG511GZ41/skXhF1g65Rnrvj5lfmlks+jpc+aGqiHAIw+s8Uz/o74M9yqbgLqli2GmmmjjXW1a0hA7+QQ==",
+  "dgSpecHash": "NRZohMh3a5yojpG1UfgBvi391NkkGbhEaRd7Wj2YD+Z3yMusDXLCIhCOeSKcO5PBVOdPIrmQlPgmB4t9wnlrTg==",
   "success": true,
-  "projectFilePath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj",
+  "projectFilePath": "D:\\C-Sharp\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CTU-LA\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\CTU-LA\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

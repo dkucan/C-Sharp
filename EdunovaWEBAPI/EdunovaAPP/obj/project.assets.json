@@ -3688,11 +3688,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\EdunovaAPP\\EdunovaAPP.csproj",
+      "projectUniqueName": "D:\\C-Sharp\\EdunovaWEBAPI\\EdunovaAPP\\EdunovaAPP.csproj",
       "projectName": "EdunovaAPP",
-      "projectPath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\EdunovaAPP\\EdunovaAPP.csproj",
+      "projectPath": "D:\\C-Sharp\\EdunovaWEBAPI\\EdunovaAPP\\EdunovaAPP.csproj",
       "packagesPath": "C:\\Users\\CTU-LA\\.nuget\\packages\\",
-      "outputPath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\EdunovaAPP\\obj\\",
+      "outputPath": "D:\\C-Sharp\\EdunovaWEBAPI\\EdunovaAPP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

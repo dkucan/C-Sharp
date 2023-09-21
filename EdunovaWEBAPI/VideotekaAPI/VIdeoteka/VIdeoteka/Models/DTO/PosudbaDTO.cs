@@ -10,6 +10,7 @@ namespace VIdeoteka.Models.DTO
         public DateTime? Datum_vracanja { get; set; }
         public int Zakasnina { get; set; }
 
+        public int SifraClan { get; set; }
         public int Sifra { get; set; }
     }
 }

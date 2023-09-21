@@ -36,7 +36,7 @@ namespace VIdeoteka.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            _logger.LogInformation("Dohvaćam grupe");
+            _logger.LogInformation("Dohvaćam posudbe");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -58,7 +58,8 @@ namespace VIdeoteka.Controllers
                 {
                     vrati.Add(new PosudbaDTO()
                     {
-                        Clan = g.Clan.Ime + "" + g.Clan.Prezime,
+                        Sifra = g.Sifra,
+                        Clan = g.Clan?.Ime + "" + g.Clan?.Prezime,
                         Datum_posudbe = g.Datum_posudbe,
                         Datum_vracanja = g.Datum_vracanja,
                         Zakasnina = g.Zakasnina,

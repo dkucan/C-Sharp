@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj": {}
+    "D:\\C-Sharp\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj": {}
   },
   "projects": {
-    "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj": {
+    "D:\\C-Sharp\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "D:\\C-Sharp\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj",
+        "projectPath": "D:\\C-Sharp\\EdunovaWEBAPI\\HelloWorld\\HelloWorld.csproj",
         "packagesPath": "C:\\Users\\CTU-LA\\.nuget\\packages\\",
-        "outputPath": "D:\\C-Sharp\\CSHARP\\EdunovaWEBAPI\\HelloWorld\\obj\\",
+        "outputPath": "D:\\C-Sharp\\EdunovaWEBAPI\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,5 +1,0 @@
-D:\C-Sharp\CSHARP\Console04\obj\Debug\net6.0\E01ForPetlja.csproj.AssemblyReference.cache
-D:\C-Sharp\CSHARP\Console04\obj\Debug\net6.0\E01ForPetlja.GeneratedMSBuildEditorConfig.editorconfig
-D:\C-Sharp\CSHARP\Console04\obj\Debug\net6.0\E01ForPetlja.AssemblyInfoInputs.cache
-D:\C-Sharp\CSHARP\Console04\obj\Debug\net6.0\E01ForPetlja.AssemblyInfo.cs
-D:\C-Sharp\CSHARP\Console04\obj\Debug\net6.0\E01ForPetlja.csproj.CoreCompileInputs.cache
