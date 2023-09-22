@@ -191,6 +191,9 @@ namespace VIdeoteka.Controllers
             }
         }
 
+
+
+
         [HttpGet]
         [Route("{sifra:int}/clanovi)")]
         public IActionResult GetClan(int Sifra)
@@ -270,15 +273,15 @@ namespace VIdeoteka.Controllers
                     return BadRequest();
                 }
 
-                var polaznik = _context.Clan.Find(clanSifra);
+                var clan = _context.Clan.Find(clanSifra);
 
-                if (polaznik == null)
+                if (clan == null)
                 {
                     return BadRequest();
                 }
 
-                // napraviti kontrolu da li je taj polaznik već u toj grupi
-                posudba.Clan.Add(Clan);
+                // napraviti kontrolu da li je taj clan već u toj posudbi
+                posudba.clan.Add(clan);
 
                 _context.posudba.Update(posudba);
                 _context.SaveChanges();
@@ -348,6 +351,7 @@ namespace VIdeoteka.Controllers
         }
     }
 }
+
 
 
    
