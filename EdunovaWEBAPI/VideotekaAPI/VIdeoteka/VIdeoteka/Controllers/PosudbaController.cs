@@ -201,13 +201,13 @@ namespace VIdeoteka.Controllers
 
         [HttpGet]
         [Route("{sifra:int}/clanovi)")]
-        public IActionResult GetClan(int Sifra)
+        public IActionResult GetClan(int sifraClan)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            if (Sifra <= 0)
+            if (sifraClan <= 0)
             {
                 return BadRequest();
             }
@@ -215,7 +215,7 @@ namespace VIdeoteka.Controllers
             {
                 var posudba = _context.posudba
                     .Include(x => x.Kazete)
-                    .FirstOrDefault(g => g.Sifra == Sifra);
+                    .FirstOrDefault(g => g.Sifra == sifraClan);
                 if (posudba.Kazete == null)
                 {
                     return BadRequest();
@@ -238,6 +238,86 @@ namespace VIdeoteka.Controllers
                     });
                 });
                 return Ok(vrati);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+        }
+        [HttpPost]
+        [Route("{sifra:int}/dodaj/{clanSifra:int}")]
+        public IActionResult DodajClana(int sifra, int sifraClan)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var posudba = _context.posudba
+                    .Include(x => x.Kazete)
+                    .FirstOrDefault(x => x.Sifra == sifraClan);
+
+                if (posudba == null)
+                {
+                    return BadRequest();
+                }
+
+                var kazeta = _context.Kazeta.Find(sifraClan);
+                if (kazeta == null)
+                {
+                    return BadRequest();
+                }
+
+                // napraviti kontrolu da li je ta kazeta već kod tog polaznika
+                posudba.Kazete.Add(kazeta);
+
+                _context.posudba.Update(posudba);
+                _context.SaveChanges();
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+
+        }
+        [HttpDelete]
+        [Route("{sifra:int}/dodaj/{kazetaSifra:int}")]
+        public IActionResult ObrisiKazetu(int sifra, int sifraClan)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            if (sifra <= 0 || sifraClan <= 0)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var posudba = _context.posudba
+                    .Include(x => x.Kazete)
+                    .FirstOrDefault(x => x.Sifra == sifraClan);
+
+                if (posudba == null)
+                {
+                    return BadRequest();
+                }
+
+                var kazeta = _context.Kazeta.Find(sifraClan);
+
+                if (kazeta == null)
+                {
+                    return BadRequest();
+                }
+                posudba.Kazete.Remove(kazeta);
+
+                _context.posudba.Update(posudba);
+                _context.SaveChanges();
+
+                return Ok();
             }
             catch (Exception ex)
             {
