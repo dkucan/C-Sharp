@@ -201,13 +201,13 @@ namespace VIdeoteka.Controllers
 
         [HttpGet]
         [Route("{sifra:int}/clanovi)")]
-        public IActionResult GetClan(int sifraClan)
+        public IActionResult GetClan(int sifraPosudba)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            if (sifraClan <= 0)
+            if (sifraPosudba <= 0)
             {
                 return BadRequest();
             }
@@ -215,8 +215,9 @@ namespace VIdeoteka.Controllers
             {
                 var posudba = _context.posudba
                     .Include(x => x.Kazete)
-                    .FirstOrDefault(g => g.Sifra == sifraClan);
-                if (posudba.Kazete == null)
+                    .FirstOrDefault(g => g.Sifra == sifraPosudba);
+
+                if (posudba == null)
                 {
                     return BadRequest();
                 }
@@ -224,6 +225,7 @@ namespace VIdeoteka.Controllers
                 {
                     return new EmptyResult();
                 }
+
                 List<kazetaDTO> vrati = new();
                 posudba.Kazete.ForEach(p =>
                 {
@@ -245,8 +247,8 @@ namespace VIdeoteka.Controllers
             }
         }
         [HttpPost]
-        [Route("{sifra:int}/dodaj/{clanSifra:int}")]
-        public IActionResult DodajClana(int sifra, int sifraClan)
+        [Route("{sifra:int}/dodaj/{sifraKazeta:int}")]
+        public IActionResult DodajKazetu(int sifra, int sifraKazeta)
         {
             if (!ModelState.IsValid)
             {
@@ -256,20 +258,20 @@ namespace VIdeoteka.Controllers
             {
                 var posudba = _context.posudba
                     .Include(x => x.Kazete)
-                    .FirstOrDefault(x => x.Sifra == sifraClan);
+                    .FirstOrDefault(x => x.Sifra == sifra);
 
                 if (posudba == null)
                 {
                     return BadRequest();
                 }
 
-                var kazeta = _context.Kazeta.Find(sifraClan);
+                var kazeta = _context.Kazeta.Find(sifraKazeta);
                 if (kazeta == null)
                 {
                     return BadRequest();
                 }
 
-                // napraviti kontrolu da li je ta kazeta već kod tog polaznika
+                // napraviti kontrolu da li je ta kazeta već kod tog člana
                 posudba.Kazete.Add(kazeta);
 
                 _context.posudba.Update(posudba);
@@ -285,13 +287,13 @@ namespace VIdeoteka.Controllers
         }
         [HttpDelete]
         [Route("{sifra:int}/dodaj/{kazetaSifra:int}")]
-        public IActionResult ObrisiKazetu(int sifra, int sifraClan)
+        public IActionResult ObrisiKazetu(int sifraKazete, int sifraPosudba)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            if (sifra <= 0 || sifraClan <= 0)
+            if (sifraKazete <= 0 || sifraPosudba <= 0)
             {
                 return BadRequest();
             }
@@ -299,14 +301,14 @@ namespace VIdeoteka.Controllers
             {
                 var posudba = _context.posudba
                     .Include(x => x.Kazete)
-                    .FirstOrDefault(x => x.Sifra == sifraClan);
+                    .FirstOrDefault(x => x.Sifra == sifraPosudba);
 
                 if (posudba == null)
                 {
                     return BadRequest();
                 }
 
-                var kazeta = _context.Kazeta.Find(sifraClan);
+                var kazeta = _context.Kazeta.Find(sifraPosudba);
 
                 if (kazeta == null)
                 {
