@@ -32,6 +32,13 @@ builder.Services.AddSwaggerGen(sgo => {
 
 });
 
+// loš način jer omogućuje svima sa svih mjesta da se spajaju na naš server
+builder.Services.AddCors(opcije => 
+{
+    opcije.AddPolicy("CorsPolicy",
+        builder =>
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+}); 
 
 //dodavanje baze podataka mora biti prije buildera
 
@@ -65,6 +72,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapControllers();
+
+app.UseCors("CorPolicy");
 
 app.Run();
 

@@ -168,7 +168,7 @@ namespace VIdeoteka.Controllers
         //        {
         //            Naslov = Faker.Lorem.Sentence(),
         //            Godina_izdanja = DateTime.Now,
-        //            Zanr = Faker.Lorem.Paragraph(),
+        //            Zanr = Faker.Lorem.Sentence(),
         //            Cijena_posudbe = Faker.RandomNumber.Next(2, 5),
         //            Cijena_zakasnine = Faker.RandomNumber.Next(2, 5),
         //        };
@@ -177,7 +177,7 @@ namespace VIdeoteka.Controllers
         //    }
 
         //    return "Uneseno 1000 fake kazeta";
-        //}
+        //
     }
 
 }
