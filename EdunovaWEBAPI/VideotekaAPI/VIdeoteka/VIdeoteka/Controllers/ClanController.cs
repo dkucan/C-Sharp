@@ -228,6 +228,35 @@ namespace VIdeoteka.Controllers
             }
 
         }
+
+        [HttpGet]
+        [Route("DodajClanaFaker")]
+
+
+        public string PopuniBazu()
+        {
+            clan k;
+            for (int i = 0; i < 1000; i++)
+            {
+                long randomOIB = Faker.RandomNumber.Next(10000000000, 99999999999);
+                string oibString = randomOIB.ToString();
+
+                k = new()
+                {
+                    Sifra = 0,
+                    Ime = Faker.Name.First(),
+                    Prezime = Faker.Name.Last(),
+                    Adresa = Faker.Address.City(),
+                    Mobitel = "09" + Faker.RandomNumber.Next(1111111, 10000000),
+                    OIB = oibString, //postavi string kao OIB
+                    Datum_uclanjenja = DateTime.Now,
+                };
+                _videotekaContext.Clan.Add(k);
+                _videotekaContext.SaveChanges();
+            }
+            return "Uneseno 1000 fake korisnika";
+        }
+
     }
 }
 
