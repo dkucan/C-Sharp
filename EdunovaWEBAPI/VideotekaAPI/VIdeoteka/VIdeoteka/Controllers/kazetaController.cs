@@ -157,31 +157,31 @@ namespace VIdeoteka.Controllers
                                   ex);
             }
         }
-        //[HttpGet]
-        //[Route("DodajKazeteFaker")]
-        //public string PopuniBazu()
-        //{
-        //    KAZETA p;
-        //    for (int i = 0; i < 1000; i++)
-        //    {
-        //        p = new()
-        //        {
-        //            Naslov = Faker.Lorem.Sentence(),
-        //            Godina_izdanja = DateTime.Now,
-        //            Zanr = Faker.Lorem.Sentence(),
-        //            Cijena_posudbe = Faker.RandomNumber.Next(2, 5),
-        //            Cijena_zakasnine = Faker.RandomNumber.Next(2, 5),
-        //        };
-        //        _context.Kazeta.Add(p);
-        //        _context.SaveChanges();
-        //    }
+        [HttpGet]
+        [Route("DodajKazeteFaker")]
+        public string PopuniBazu()
+        {
+            KAZETA p;
+            for (int i = 0; i < 1000; i++)
+            {
+                p = new()
+                {
+                    Naslov = Faker.Company.Name(), //stavljeno ovako zbog upisa u bazu
+                    Godina_izdanja = DateTime.Now,
+                    Zanr = Faker.Company.Suffix(), //stavljeno ovako zbog upisa u bazu
+                    Cijena_posudbe = Faker.RandomNumber.Next(2, 5),
+                    Cijena_zakasnine = Faker.RandomNumber.Next(2, 5),
+                };
+                _context.Kazeta.Add(p);
+                _context.SaveChanges();
+            }
 
-        //    return "Uneseno 1000 fake kazeta";
-        //
+            return "Uneseno 1000 fake kazeta";
+
+        }
+
     }
-
 }
-
             
         
    
