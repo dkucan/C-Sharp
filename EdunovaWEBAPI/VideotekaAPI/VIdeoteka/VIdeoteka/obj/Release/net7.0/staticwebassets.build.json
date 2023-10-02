@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "jc9zlb7jSfkwJ1RhAtxfUbopfU1UGCJyF66cvvqg9ro=",
+  "Source": "VIdeoteka",
+  "BasePath": "_content/VIdeoteka",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "VIdeoteka\\wwwroot",
+      "Source": "VIdeoteka",
+      "ContentRoot": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\",
+      "BasePath": "_content/VIdeoteka",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\index.html",
+      "SourceId": "VIdeoteka",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\",
+      "BasePath": "_content/VIdeoteka",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.VIdeoteka.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.VIdeoteka.props",
+      "PackagePath": "build\\VIdeoteka.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.VIdeoteka.props",
+      "PackagePath": "buildMultiTargeting\\VIdeoteka.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.VIdeoteka.props",
+      "PackagePath": "buildTransitive\\VIdeoteka.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
