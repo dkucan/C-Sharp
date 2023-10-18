@@ -290,3 +290,4 @@ D:\C-Sharp\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\VIdeoteka\obj\Debug\net7.0\refin
 D:\C-Sharp\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\VIdeoteka\obj\Debug\net7.0\VIdeoteka.pdb
 D:\C-Sharp\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\VIdeoteka\obj\Debug\net7.0\VIdeoteka.genruntimeconfig.cache
 D:\C-Sharp\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\VIdeoteka\obj\Debug\net7.0\ref\VIdeoteka.dll
+D:\C-Sharp\EdunovaWEBAPI\VideotekaAPI\VIdeoteka\VIdeoteka\bin\Debug\net7.0\VIdeoteka.staticwebassets.runtime.json

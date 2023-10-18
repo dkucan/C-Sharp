@@ -74,7 +74,7 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-app.UseCors("CorPolicy");
+app.UseCors("CorsPolicy");
 app.UseDefaultFiles();
 app.UseDeveloperExceptionPage();
 app.MapFallbackToFile("index.html");

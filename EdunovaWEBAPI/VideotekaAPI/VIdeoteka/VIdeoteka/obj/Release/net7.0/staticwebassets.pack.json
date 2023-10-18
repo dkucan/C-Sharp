@@ -1,8 +1,76 @@
 {
   "Files": [
     {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\asset-manifest.json",
+      "PackagePath": "staticwebassets\\asset-manifest.json"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
       "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\logo192.png",
+      "PackagePath": "staticwebassets\\logo192.png"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\logo512.png",
+      "PackagePath": "staticwebassets\\logo512.png"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\robots.txt",
+      "PackagePath": "staticwebassets\\robots.txt"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\service-worker.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\service-worker.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\service-worker.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\service-worker.js.map",
+      "PackagePath": "staticwebassets\\service-worker.js.map"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\css\\main.073c9b0a.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.073c9b0a.css"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\css\\main.073c9b0a.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.073c9b0a.css.map"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\787.6a5150d3.chunk.js",
+      "PackagePath": "staticwebassets\\static\\js\\787.6a5150d3.chunk.js"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\787.6a5150d3.chunk.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\787.6a5150d3.chunk.js.map"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\main.e35ae37c.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.e35ae37c.js"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\main.e35ae37c.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.e35ae37c.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\main.e35ae37c.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.e35ae37c.js.map"
+    },
+    {
+      "Id": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg",
+      "PackagePath": "staticwebassets\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg"
     },
     {
       "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.VIdeoteka.Microsoft.AspNetCore.StaticWebAssets.props",

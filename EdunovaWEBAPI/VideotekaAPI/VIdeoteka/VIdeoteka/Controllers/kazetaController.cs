@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.VisualBasic;
 using VIdeoteka.Models.DTO;
+using System.Runtime.Serialization;
+using System.Data.SqlTypes;
+using System.Globalization;
 
 namespace VIdeoteka.Controllers
 {
@@ -157,32 +160,35 @@ namespace VIdeoteka.Controllers
                                   ex);
             }
         }
-        [HttpGet]
-        [Route("DodajKazeteFaker")]
-        public string PopuniBazu()
-        {
-            KAZETA p;
-            for (int i = 0; i < 1000; i++)
-            {
-                p = new()
-                {
-                    Naslov = Faker.Company.Name(), //stavljeno ovako zbog upisa u bazu
-                    Godina_izdanja = DateTime.Now,
-                    Zanr = Faker.Company.Suffix(), //stavljeno ovako zbog upisa u bazu
-                    Cijena_posudbe = Faker.RandomNumber.Next(2, 5),
-                    Cijena_zakasnine = Faker.RandomNumber.Next(2, 5),
-                };
-                _context.Kazeta.Add(p);
-                _context.SaveChanges();
-            }
+        //[HttpGet]
+        //[Route("DodajKazeteFaker")]
+        //public string PopuniBazu()
+        //{
+        //    KAZETA p;
+        //    for (int i = 0; i < 1000; i++)
+        //    {
+        //        p = new()
+        //        {
+        //            Naslov = Faker.Company.Name(), //stavljeno ovako zbog upisa u bazu
+        //            Godina_izdanja = DateTime.Now,
+        //            Zanr = Faker.Company.Suffix(), //stavljeno ovako zbog upisa u bazu
+        //            Cijena_posudbe = Faker.RandomNumber.Next(2, 5),
+        //            Cijena_zakasnine = Faker.RandomNumber.Next(2, 5),
+        //        };
+        //        _context.Kazeta.Add(p);
+        //        _context.SaveChanges();
+        //    }
 
-            return "Uneseno 1000 fake kazeta";
+        //    return "Uneseno 1000 fake kazeta";
+
+        // Faker ne bih želio brisati ali je morao ići van iz produkcije zato što je u bazi još bio problem sa Godinom izdanja koja se morala
+        // prebaciti sa DateTime na int a nije bilo baš nikakve mogućnosti faker prilagoditi tako da... No ostavljam ga ovdje zakomentiranog
+        // za uspomenu na trud...
 
         }
 
     }
-}
-            
+         
         
    
     
