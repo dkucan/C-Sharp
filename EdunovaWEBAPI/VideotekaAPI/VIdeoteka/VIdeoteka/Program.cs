@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen(sgo => {
             Email = "dkucan61@gmail.com",
             Name = "Darko Kucan"
         },
-        Description = "Ovo je dokumentacija za Edunova API",
+        Description = "Ovo je dokumentacija za Videoteka API",
         License = new Microsoft.OpenApi.Models.OpenApiLicense()
         {
             Name = "Edunova licenca"
@@ -70,10 +70,8 @@ var app = builder.Build();
 //}
 
 app.UseHttpsRedirection();
-
-
 app.MapControllers();
-
+app.UseStaticFiles();
 app.UseCors("CorsPolicy");
 app.UseDefaultFiles();
 app.UseDeveloperExceptionPage();
