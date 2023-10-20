@@ -75,22 +75,53 @@ namespace VIdeoteka.Controllers
             return Ok(vrati);
 
         }
-        /// <summary>
-        /// Dodaje clana u bazu
-        /// </summary>
-        /// <remarks>
-        /// Primjer upita:
-        ///
-        ///    POST api/v1/Clan
-        ///    {Ime:"",Prezime:""}
-        ///
-        /// </remarks>
-        /// <returns>Kreirani clan u bazi s svim podacima</returns>
-        /// <response code="200">Sve je u redu</response>
-        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
-        /// <response code="503">Na azure treba dodati IP u firewall</response> 
 
-        [HttpPost]
+    
+
+    [HttpGet]
+    [Route("{sifra:int}")]
+    public IActionResult GetBySifra(int sifra)
+    {
+
+        if (sifra <= 0)
+        {
+            return BadRequest(ModelState);
+        }
+
+        try
+        {
+            var s = _videotekaContext.Clan.Find(sifra);
+
+            if (s == null)
+            {
+                return StatusCode(StatusCodes.Status204NoContent, s);
+            }
+
+            return new JsonResult(s);
+
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+        }
+
+    }
+    /// <summary>
+    /// Dodaje clana u bazu
+    /// </summary>
+    /// <remarks>
+    /// Primjer upita:
+    ///
+    ///    POST api/v1/Clan
+    ///    {Ime:"",Prezime:""}
+    ///
+    /// </remarks>
+    /// <returns>Kreirani clan u bazi s svim podacima</returns>
+    /// <response code="200">Sve je u redu</response>
+    /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+    /// <response code="503">Na azure treba dodati IP u firewall</response> 
+
+    [HttpPost]
         public IActionResult Post(CLANDTO dto)
         {
             if (!ModelState.IsValid)
