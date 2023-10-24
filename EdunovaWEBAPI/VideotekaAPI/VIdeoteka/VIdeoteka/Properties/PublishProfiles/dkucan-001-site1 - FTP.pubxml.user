@@ -8,7 +8,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
     <_PublishTargetUrl>ftp://win6055.site4now.net:21/videoteka1</_PublishTargetUrl>
-    <History>False|2023-10-19T02:30:01.4527480Z;</History>
+    <History>False|2023-10-24T21:47:00.0766333Z;False|2023-10-19T04:30:01.4527480+02:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

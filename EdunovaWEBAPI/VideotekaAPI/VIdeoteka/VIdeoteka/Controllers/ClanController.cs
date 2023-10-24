@@ -106,20 +106,74 @@ namespace VIdeoteka.Controllers
         }
 
     }
-    /// <summary>
-    /// Dodaje clana u bazu
-    /// </summary>
-    /// <remarks>
-    /// Primjer upita:
-    ///
-    ///    POST api/v1/Clan
-    ///    {Ime:"",Prezime:""}
-    ///
-    /// </remarks>
-    /// <returns>Kreirani clan u bazi s svim podacima</returns>
-    /// <response code="200">Sve je u redu</response>
-    /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
-    /// <response code="503">Na azure treba dodati IP u firewall</response> 
+        /// <summary>
+        /// Dodaje clana u bazu
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    POST api/v1/Clan
+        ///    {Ime:"",Prezime:""}
+        ///
+        /// </remarks>
+        /// <returns>Kreirani clan u bazi s svim podacima</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
+
+
+        [HttpGet]
+        [Route("trazi/(uvjet)")]
+        public IActionResult TraziClan (string uvjet)
+        {
+            // ovdje će ići dohvaćanje u bazi
+
+            if(uvjet == null || uvjet.Length < 3)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var clan = _videotekaContext.Clan
+                    .Include(p => p.posudba)
+                    .Where(p => p.Ime.Contains(uvjet) || p.Prezime.Contains(uvjet))
+
+                    //. FromSqlRaw($"Select a.* from clan a left join clan b on a.sifra=b.clan where concat(ime, '', prezime, ime) like '%@uvjet%' ",
+                    // new SqlParameter ("uvjet", uvjet), new SqlPArameter("posudba", posudba))
+                    .ToList();
+
+                // (b.posudba is null or b.posudba!=@posudba) and
+                List<CLANDTO> vrati = new();
+
+                clan.ForEach(s =>
+                {
+
+                    var sdto = new CLANDTO();
+                    // dodati u nuget automapper ili neki drugi i skužiti kako se s njim radi, sada ručno
+                    vrati.Add(new CLANDTO
+                    {
+                        Sifra = s.Sifra,
+                        Ime = s.Ime,
+                        Prezime = s.Prezime,
+                        Adresa = s.Adresa,
+                        Mobitel = s.Mobitel,
+                        OIB = s.OIB,
+                        Datum_uclanjenja = s.Datum_uclanjenja
+
+                    });
+                });
+
+                return new JsonResult(vrati); //200
+                }
+
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, e.Message); //204
+            }
+
+            }
+        
 
     [HttpPost]
         public IActionResult Post(CLANDTO dto)
