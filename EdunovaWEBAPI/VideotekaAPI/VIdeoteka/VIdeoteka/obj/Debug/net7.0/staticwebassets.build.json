@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ygK5lMR0+KnAXfef+caw8iD7e5c7hZfCuNu/ovV1ARc=",
+  "Hash": "E116ZXgUyug/FDdL7T0l7DYeKMF/S/WC+/jr6jsog18=",
   "Source": "VIdeoteka",
   "BasePath": "_content/VIdeoteka",
   "Mode": "Default",
@@ -187,12 +187,12 @@
       "OriginalItemSpec": "wwwroot\\service-worker.js.map"
     },
     {
-      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\css\\main.073c9b0a.css",
+      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\css\\main.8e8bae16.css",
       "SourceId": "VIdeoteka",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\",
       "BasePath": "_content/VIdeoteka",
-      "RelativePath": "static/css/main.073c9b0a.css",
+      "RelativePath": "static/css/main.8e8bae16.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,15 +201,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.073c9b0a.css"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.8e8bae16.css"
     },
     {
-      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\css\\main.073c9b0a.css.map",
+      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\css\\main.8e8bae16.css.map",
       "SourceId": "VIdeoteka",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\",
       "BasePath": "_content/VIdeoteka",
-      "RelativePath": "static/css/main.073c9b0a.css.map",
+      "RelativePath": "static/css/main.8e8bae16.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,7 +218,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.073c9b0a.css.map"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.8e8bae16.css.map"
     },
     {
       "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\787.6a5150d3.chunk.js",
@@ -255,12 +255,12 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\787.6a5150d3.chunk.js.map"
     },
     {
-      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\main.e35ae37c.js",
+      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\main.c350ecf0.js",
       "SourceId": "VIdeoteka",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\",
       "BasePath": "_content/VIdeoteka",
-      "RelativePath": "static/js/main.e35ae37c.js",
+      "RelativePath": "static/js/main.c350ecf0.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,15 +269,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.e35ae37c.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.c350ecf0.js"
     },
     {
-      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\main.e35ae37c.js.LICENSE.txt",
+      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\main.c350ecf0.js.LICENSE.txt",
       "SourceId": "VIdeoteka",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\",
       "BasePath": "_content/VIdeoteka",
-      "RelativePath": "static/js/main.e35ae37c.js.LICENSE.txt",
+      "RelativePath": "static/js/main.c350ecf0.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,15 +286,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.e35ae37c.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.c350ecf0.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\main.e35ae37c.js.map",
+      "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\js\\main.c350ecf0.js.map",
       "SourceId": "VIdeoteka",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\",
       "BasePath": "_content/VIdeoteka",
-      "RelativePath": "static/js/main.e35ae37c.js.map",
+      "RelativePath": "static/js/main.c350ecf0.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -303,7 +303,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.e35ae37c.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.c350ecf0.js.map"
     },
     {
       "Identity": "D:\\C-Sharp\\EdunovaWEBAPI\\VideotekaAPI\\VIdeoteka\\VIdeoteka\\wwwroot\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg",

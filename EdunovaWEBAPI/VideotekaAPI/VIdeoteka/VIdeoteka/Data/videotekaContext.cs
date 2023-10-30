@@ -17,6 +17,8 @@ namespace VIdeoteka.Data
 
         public DbSet<Posudba> posudba { get; set; }
 
+        public DbSet<Operater> Operater { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Posudba>().HasOne(o => o.Clan);
